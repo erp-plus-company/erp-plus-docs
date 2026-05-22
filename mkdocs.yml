@@ -1,10 +1,11 @@
 site_name: ERP Plus Documentation
 site_description: Modular ERP Platform Documentation
 site_author: ERP Plus Company
-site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 repo_name: erp-plus-company/erp-plus-docs
 repo_url: https://github.com/erp-plus-company/erp-plus-docs
+
+site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 theme:
   name: material
@@ -13,10 +14,10 @@ theme:
       primary: blue grey
       accent: indigo
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.instant
     - toc.integrate
     - content.code.copy
 
@@ -28,19 +29,25 @@ nav:
       - Installation: getting-started/installation.md
 
   - Architecture:
-      - Overview: architecture/overview.md
+      - Overview: architecture/index.md
       - Modular Monolith: architecture/modular-monolith.md
       - Engines: architecture/engines.md
       - Multi-tenancy: architecture/multitenancy.md
 
+  - Engines:
+      - ERP Core: engines/erp_core/index.md
+      - Accounts: engines/erp_accounts/index.md
+      - Users: engines/erp_users/index.md
+      - Workers: engines/erp_workers/index.md
+      - Inventory: engines/erp_inventory/index.md
+
   - Development:
-      - Setup: development/setup.md
       - Workflow: development/workflow.md
       - Testing: development/testing.md
-      - Standards: development/coding-standards.md
+      - Standards: development/standards.md
 
   - Deployment:
-      - Overview: deployment/ci-cd.md
+      - CI/CD: deployment/ci-cd.md
       - Kamal: deployment/kamal.md
       - Environments: deployment/environments.md
       - Rollback: deployment/rollback.md
@@ -50,23 +57,16 @@ nav:
       - Secrets: security/secrets.md
       - Vulnerabilities: security/vulnerabilities.md
 
-  - Engines:
-      - Core: engines/erp_core.md
-      - Accounts: engines/erp_accounts.md
-      - Users: engines/erp_users.md
-      - Workers: engines/erp_workers.md
-      - Inventory: engines/erp_inventory.md
-
   - Decisions:
-      - ADR 0001 Modular Monolith: decisions/adr-0001.md
-      - ADR 0002 Kamal: decisions/adr-0002.md
-      - ADR 0003 Engines: decisions/adr-0003.md
+      - ADR 0001 Modular Monolith: decisions/adr-0001-modular-monolith.md
+      - ADR 0002 Kamal: decisions/adr-0002-kamal.md
+      - ADR 0003 Engines: decisions/adr-0003-engines.md
 
 plugins:
   - search
 
 markdown_extensions:
   - admonition
-  - codehilite
   - toc:
       permalink: true
+  - codehilite
