@@ -1,0 +1,66 @@
+site_name: ERP Plus Documentation
+site_description: Modular ERP Platform Documentation
+site_author: ERP Plus Company
+
+repo_name: erp-plus-company/erp-plus-docs
+repo_url: https://github.com/erp-plus-company/erp-plus-docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+
+nav:
+  - Home: index.md
+
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Modular Monolith: architecture/modular-monolith.md
+      - Engines: architecture/engines.md
+      - Multi-tenancy: architecture/multitenancy.md
+
+  - Development:
+      - Setup: development/setup.md
+      - Workflow: development/workflow.md
+      - Testing: development/testing.md
+      - Standards: development/coding-standards.md
+
+  - Deployment:
+      - Overview: deployment/ci-cd.md
+      - Kamal: deployment/kamal.md
+      - Environments: deployment/environments.md
+      - Rollback: deployment/rollback.md
+
+  - Security:
+      - Policies: security/policies.md
+      - Secrets: security/secrets.md
+      - Vulnerabilities: security/vulnerabilities.md
+
+  - Engines:
+      - Core: engines/erp_core.md
+      - Accounts: engines/erp_accounts.md
+      - Users: engines/erp_users.md
+      - Workers: engines/erp_workers.md
+      - Inventory: engines/erp_inventory.md
+
+  - Decisions:
+      - ADR 0001 Modular Monolith: decisions/adr-0001.md
+      - ADR 0002 Kamal: decisions/adr-0002.md
+      - ADR 0003 Engines: decisions/adr-0003.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
