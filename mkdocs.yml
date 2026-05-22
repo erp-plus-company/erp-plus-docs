@@ -1,6 +1,7 @@
 site_name: ERP Plus Documentation
 site_description: Modular ERP Platform Documentation
 site_author: ERP Plus Company
+site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 repo_name: erp-plus-company/erp-plus-docs
 repo_url: https://github.com/erp-plus-company/erp-plus-docs
@@ -12,6 +13,7 @@ theme:
       primary: blue grey
       accent: indigo
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.expand
@@ -20,6 +22,10 @@ theme:
 
 nav:
   - Home: index.md
+
+  - Getting Started:
+      - Introduction: getting-started/index.md
+      - Installation: getting-started/installation.md
 
   - Architecture:
       - Overview: architecture/overview.md
