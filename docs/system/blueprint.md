@@ -28,7 +28,7 @@ ERP Plus IS:
 
 # 🏗 Global Architecture Map
 
-```txt id="global-architecture"
+```bash
 ERP Plus System
 │
 ├── 🌐 Entry Layer (Requests)
