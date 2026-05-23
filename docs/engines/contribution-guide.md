@@ -248,32 +248,45 @@ Before approval:
 
 ---
 
-📦 Versioning Engines (IMPORTANT)
+# 📦 Versioning Engines (IMPORTANT)
 
 Each engine SHOULD evolve independently.
 
 Future-ready model:
 
+```bash
 erp_users v1.0
 erp_inventory v1.0
 erp_workers v1.0
-🧠 Mental Model
+```
+
+---
+
+# 🧠 Mental Model
+
+```bash
 Engine = Mini Product inside ERP Plus
-⚡ Why this exists
+```
+
+---
+
+# ⚡ Why this exists
 
 Without this guide:
 
-engines become coupled
-architecture degrades
-system becomes monolith spaghetti
+- engines become coupled
+- architecture degrades
+- system becomes monolith spaghetti
 
 With this guide:
 
-✔ scalable architecture
-✔ clear ownership
-✔ enterprise-grade modularity
-✔ safe external contributions
+- ✔ scalable architecture
+- ✔ clear ownership
+- ✔ enterprise-grade modularity
+- ✔ safe external contributions
 
-🧠 Final Definition
+---
 
-An engine is a fully isolated domain module that behaves like a mini-application inside a controlled monolith ecosystem.
+# 🧠 Final Definition
+
+> An engine is a fully isolated domain module that behaves like a mini-application inside a controlled monolith ecosystem.
