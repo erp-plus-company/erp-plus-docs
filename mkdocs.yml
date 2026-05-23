@@ -8,7 +8,7 @@ repo_url: https://github.com/erp-plus-company/erp-plus-docs
 site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 theme:
-  name: mkdocs
+  name: readthedocs
   palette:
     - scheme: default
       primary: blue grey
