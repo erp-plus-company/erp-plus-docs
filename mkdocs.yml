@@ -8,11 +8,11 @@ repo_url: https://github.com/erp-plus-company/erp-plus-docs
 site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 theme:
-  name: gitbook
+  name: material
   palette:
     - scheme: default
-      primary: blue grey
-      accent: indigo
+      primary: orange
+      accent: grey
   features:
     - navigation.tabs
     - navigation.sections
