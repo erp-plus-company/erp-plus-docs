@@ -30,7 +30,7 @@ They must interact through **explicit contracts**, not implicit coupling.
 
 Every engine MUST follow this structure:
 
-```txt id="structure"
+```bash
 engines/erp_example/
 ├── app/
 ├── config/

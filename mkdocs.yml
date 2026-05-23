@@ -29,7 +29,7 @@ nav:
       - Architecture Map: system/blueprint.md
       - Engine Contracts: system/engine-contracts.md
       - Data Flow: system/data-flow.md
-      - Roles and Access: system/roles-access.md
+      - Roles and Access: system/roles-and-access.md
       - Governance and Evolution: system/governance-and-evolution.md
       - Observability and Operational Model: system/observability-and-operational-model.md
 
@@ -44,11 +44,11 @@ nav:
       - Multi-tenancy: architecture/multitenancy.md
 
   - Engines:
-      - ERP Core: engines/erp_core/index.md
-      - Accounts: engines/erp_accounts/index.md
-      - Users: engines/erp_users/index.md
-      - Workers: engines/erp_workers/index.md
-      - Inventory: engines/erp_inventory/index.md
+      - Erp Core: engines/erp_core/index.md
+      - Erp Accounts: engines/erp_accounts/index.md
+      - Erp Users: engines/erp_users/index.md
+      - Erp Workers: engines/erp_workers/index.md
+      - Erp Inventory: engines/erp_inventory/index.md
 
   - Development:
       - Workflow: development/workflow.md

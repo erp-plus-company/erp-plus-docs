@@ -69,7 +69,7 @@ Breaking changes are allowed ONLY if:
 
 Every meaningful system change follows:
 
-```txt id="evolution-flow"
+```bash
 Idea → ADR (optional) → Implementation → CI Validation → Review → Merge → Release
 ```
 

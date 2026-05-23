@@ -26,7 +26,7 @@ ERP Plus observability is divided into 4 layers:
 
 Every request MUST be traceable across:
 
-```txt id="trace-layer"
+```bash
 User Request
 → Authentication (erp_users)
 → Account Resolution (erp_accounts)

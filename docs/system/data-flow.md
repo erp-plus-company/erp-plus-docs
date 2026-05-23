@@ -16,7 +16,7 @@ It is a **single system where requests travel through multiple bounded contexts 
 
 Every request in ERP Plus follows this pipeline:
 
-```txt id="flow-high"
+```bash
 User Request
   → Authentication (erp_users)
   → Account Resolution (erp_accounts)

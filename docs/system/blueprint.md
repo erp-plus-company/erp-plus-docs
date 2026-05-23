@@ -35,11 +35,11 @@ ERP Plus System
 │   └── API / Web / Frontend
 │
 ├── 🔐 Identity Layer
-│   ├── erp_users (authentication)
+│   ├── erp_core (authentication)
 │   └── erp_accounts (accounts)
 │
 ├── ⚙️ Domain Layer (Engines)
-│   ├── erp_core
+│   ├── erp_users
 │   ├── erp_inventory
 │   ├── erp_workers
 │   └── others
@@ -63,7 +63,7 @@ Every action in ERP Plus follows this pattern:
 
 ```bash
 Request
-  → Authentication (erp_users)
+  → Authentication (erp_core)
   → Account Resolution (erp_accounts)
   → Authorization Layer
   → Domain Engine Execution
