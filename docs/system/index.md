@@ -77,7 +77,7 @@ Security is not optional:
 
 # 🏗 System Architecture
 
-```txt id="arch"
+```bash
 ERP Plus
 │
 ├── Core Rails Application
