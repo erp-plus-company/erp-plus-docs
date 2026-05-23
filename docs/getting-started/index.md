@@ -8,7 +8,7 @@ This guide will help you understand how to install, run, and contribute to the p
 
 ## What is ERP Plus?
 
-ERP Plus is a modular multi-tenant ERP system built with:
+ERP Plus is a modular multi-account ERP system built with:
 
 - Rails 8
 - Modular Engines architecture
@@ -21,7 +21,7 @@ ERP Plus is a modular multi-tenant ERP system built with:
 
 - Modular monolith design
 - Engine isolation
-- Multi-tenant architecture
+- Multi-account architecture
 - CI/CD automation
 
 ---

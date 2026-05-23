@@ -9,7 +9,7 @@ ERP Plus is built as a **modular monolith using Rails Engines**.
 - Separation of concerns
 - Engine isolation
 - Explicit dependencies
-- Multi-tenant design
+- Multi-account design
 - Cloud-native deployment
 
 ---

@@ -1,19 +1,19 @@
 # Multi-tenancy
 
-ERP Plus supports multi-tenant architecture.
+ERP Plus supports multi-account architecture.
 
 ---
 
 ## Concept
 
-Each account belongs to a tenant (organization).
+Each account belongs to a account (organization).
 
 ---
 
 ## Isolation Strategy
 
-- Scoped queries per tenant
-- Middleware-based tenant resolution
+- Scoped queries per account
+- Middleware-based account resolution
 - Data separation at application layer
 
 ---

@@ -14,7 +14,7 @@ This documentation contains:
 
 ## System Overview
 
-ERP Plus is a modular multi-tenant ERP platform built on:
+ERP Plus is a modular multi-account ERP platform built on:
 
 - Ruby on Rails 8
 - Rails Engines architecture

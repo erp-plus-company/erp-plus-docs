@@ -24,6 +24,15 @@ theme:
 nav:
   - Home: index.md
 
+  - System Blueprint:
+      - Overview: system/index.md
+      - Architecture Map: system/blueprint.md
+      - Engine Contracts: system/engine-contracts.md
+      - Data Flow: system/data-flow.md
+      - Roles and Access: system/roles-access.md
+      - Governance and Evolution: system/governance-and-evolution.md
+      - Observability and Operational Model: system/observability-and-operational-model.md
+
   - Getting Started:
       - Introduction: getting-started/index.md
       - Installation: getting-started/installation.md
@@ -50,6 +59,7 @@ nav:
       - CI/CD: deployment/ci-cd.md
       - Kamal: deployment/kamal.md
       - Environments: deployment/environments.md
+      - PR Standards: deployment/pr-standards.md
       - Rollback: deployment/rollback.md
 
   - Security:

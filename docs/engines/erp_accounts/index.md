@@ -7,5 +7,5 @@ Handles multi-tenancy and organizations.
 ## Responsibilities
 
 - Organizations
-- Tenants
+- Accounts
 - Billing context
