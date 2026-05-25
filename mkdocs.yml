@@ -43,6 +43,7 @@ nav:
   - Getting Started:
       - Introduction: getting-started/index.md
       - Installation: getting-started/installation.md
+      - First Run: getting-started/first-run.md
 
   - Architecture:
       - Overview: architecture/index.md
@@ -62,6 +63,8 @@ nav:
       - Workflow: development/workflow.md
       - Testing: development/testing.md
       - Standards: development/standards.md
+      - PR Standards: development/pr-standards.md
+      - Feature Lifecycle: development/feature-lifecycle.md
 
   - Deployment:
       - CI/CD: deployment/ci-cd.md
