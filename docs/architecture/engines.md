@@ -1,23 +1,102 @@
-# Engines Architecture
+# Engines Overview
 
-ERP Plus is composed of isolated Rails Engines.
+ERP Plus is composed of domain-oriented Rails Engines.
 
----
-
-## Engines
-
-| Engine        | Responsibility                |
-| ------------- | ----------------------------- |
-| erp_core      | Base system logic             |
-| erp_accounts  | Multi-tenancy + organizations |
-| erp_users     | Authentication & users        |
-| erp_workers   | Background jobs               |
-| erp_inventory | Stock management              |
+Each engine owns a specific business capability.
 
 ---
 
-## Rules
+# Engine Map
 
-- No engine should depend on internal implementation of another
-- Communication must be explicit
-- Shared logic goes in erp_core
+| Engine        | Responsibility                       |
+| ------------- | ------------------------------------ |
+| erp_core      | Shared platform services             |
+| erp_accounts  | Organizations and account management |
+| erp_users     | Authentication and user management   |
+| erp_workers   | Background jobs and async processing |
+| erp_inventory | Inventory and stock management       |
+
+---
+
+# Platform Structure
+
+```txt
+ERP Plus
+│
+├── erp_core
+├── erp_accounts
+├── erp_users
+├── erp_workers
+└── erp_inventory
+```
+
+---
+
+# Engine Responsibilities
+
+## erp_core
+
+Provides:
+
+- authentication
+- shared services
+- platform abstractions
+- common utilities
+
+---
+
+## erp_accounts
+
+Responsible for:
+
+- organizations
+- account context
+- account isolation
+
+---
+
+## erp_users
+
+Responsible for:
+
+- user lifecycle
+- identity management
+
+---
+
+## erp_workers
+
+Responsible for:
+
+- asynchronous jobs
+- retries
+- scheduled processing
+
+---
+
+## erp_inventory
+
+Responsible for:
+
+- products
+- stock management
+- inventory operations
+
+---
+
+# Why Engines Exist
+
+Engines allow ERP Plus to:
+
+- separate business domains
+- scale development teams
+- isolate responsibilities
+- reduce coupling
+
+---
+
+# Related Documentation
+
+For engine rules and contracts see:
+
+→ System Blueprint / Engine Contracts

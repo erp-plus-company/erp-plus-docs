@@ -1,37 +1,76 @@
-# Architecture Overview
+# Architecture Reading Guide
 
-ERP Plus is built as a **modular monolith using Rails Engines**.
+This section contains the detailed architectural foundations of ERP Plus.
 
----
-
-## Principles
-
-- Separation of concerns
-- Engine isolation
-- Explicit dependencies
-- Multi-account design
-- Cloud-native deployment
+Unlike the System Blueprint, which explains how the platform operates as a whole, this section focuses on specific architectural concepts and design decisions.
 
 ---
 
-## Core Stack
+## Contents
 
-- Rails 8
-- PostgreSQL
-- Hotwire
-- Stimulus
-- TailwindCSS
-- Solid Queue / Cache / Cable
-- Docker + Kamal
+### Modular Monolith
+
+Understand why ERP Plus uses a modular monolith instead of microservices.
+
+Topics covered:
+
+- rationale
+- benefits
+- trade-offs
+- scalability model
+
+→ See: `modular-monolith.md`
 
 ---
 
-## Engines
+### Engine Design
 
-Each domain is an isolated engine:
+Understand the domain structure of ERP Plus.
 
-- erp_core
-- erp_accounts
-- erp_users
-- erp_workers
-- erp_inventory
+Topics covered:
+
+- available engines
+- responsibilities
+- domain boundaries
+- engine ownership
+
+→ See: `engines.md`
+
+---
+
+### Multi-tenancy
+
+Understand how ERP Plus isolates organizations and data.
+
+Topics covered:
+
+- account model
+- tenant isolation
+- request scoping
+- security boundaries
+
+→ See: `multitenancy.md`
+
+---
+
+## Relationship with System Blueprint
+
+If you are new to ERP Plus, read first:
+
+- System Overview
+- System Blueprint
+- Data Flow
+
+Then continue with this section.
+
+---
+
+## Goal
+
+This section exists to explain:
+
+- architectural decisions
+- system structure
+- design rationale
+
+without duplicating operational documentation.
