@@ -58,4 +58,4 @@ bundle exec rubocop
 
 Continue with:
 
-→ ../system/index.md
+→ [System Overview](../system/index.md)

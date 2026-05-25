@@ -41,4 +41,4 @@ bin/dev
 
 Continue with:
 
-→ first-run.md
+→ [First run](first-run.md)

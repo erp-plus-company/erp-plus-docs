@@ -42,8 +42,7 @@ Set up your local environment.
 
 Start the platform and verify everything works correctly.
 
-→ first-run.md
-[First run](first-run.md)
+→ [First run](first-run.md)
 
 ### 3. System Overview
 
