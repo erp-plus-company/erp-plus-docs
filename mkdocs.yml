@@ -33,6 +33,13 @@ nav:
       - Governance and Evolution: system/governance-and-evolution.md
       - Observability and Operational Model: system/observability-and-operational-model.md
 
+  - Organization:
+      - Overview: organization/index.md
+      - Repositories: organization/repositories.md
+      - Visibility Model: organization/visibility-model.md
+      - Ownership Model: organization/ownership-model.md
+      - Platform Structure: organization/platform-structure.md
+
   - Getting Started:
       - Introduction: getting-started/index.md
       - Installation: getting-started/installation.md
