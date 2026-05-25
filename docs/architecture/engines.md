@@ -2,7 +2,7 @@
 
 ERP Plus is composed of domain-oriented Rails Engines.
 
-Each engine owns a specific business capability.
+Each engine owns a specific business capability and acts as a bounded context inside the platform.
 
 ---
 
@@ -32,55 +32,14 @@ ERP Plus
 
 ---
 
-# Engine Responsibilities
+# Architectural Principles
 
-## erp_core
+All engines must:
 
-Provides:
-
-- authentication
-- shared services
-- platform abstractions
-- common utilities
-
----
-
-## erp_accounts
-
-Responsible for:
-
-- organizations
-- account context
-- account isolation
-
----
-
-## erp_users
-
-Responsible for:
-
-- user lifecycle
-- identity management
-
----
-
-## erp_workers
-
-Responsible for:
-
-- asynchronous jobs
-- retries
-- scheduled processing
-
----
-
-## erp_inventory
-
-Responsible for:
-
-- products
-- stock management
-- inventory operations
+- own their domain logic
+- expose explicit interfaces
+- remain independently testable
+- respect multi-tenancy boundaries
 
 ---
 
@@ -89,14 +48,23 @@ Responsible for:
 Engines allow ERP Plus to:
 
 - separate business domains
-- scale development teams
+- scale engineering teams
 - isolate responsibilities
 - reduce coupling
+- evolve independently
 
 ---
 
 # Related Documentation
 
-For engine rules and contracts see:
+Detailed engine documentation:
 
-→ System Blueprint / Engine Contracts
+→ [erp_core](../engines/erp_core/index.md)
+→ [erp_accounts](../engines/erp_accounts/index.md)
+→ [erp_users](../engines/erp_users/index.md)
+→ [erp_workers](../engines/erp_workers/index.md)
+→ [erp_inventory](../engines/erp_inventory/index.md)
+
+Engine behavior and rules:
+
+→ [Rules Engine](../system/engine-contracts.md)

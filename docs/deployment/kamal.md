@@ -1,10 +1,31 @@
-# Kamal Deployment
+# 🚢 Kamal Deployment
 
-Kamal is used for production deployments.
+ERP Plus uses Kamal for application deployment.
 
 ---
 
-## Deploy
+# Purpose
+
+Kamal provides:
+
+- containerized deployments
+- rolling updates
+- zero-downtime deployments
+- simplified operations
+
+---
+
+# Environment Injection
+
+Deployment configuration is injected through:
+
+- GitHub Secrets
+- environment variables
+- Kamal configuration
+
+---
+
+# Deployment Flow
 
 ```bash
 bin/kamal deploy
@@ -12,8 +33,19 @@ bin/kamal deploy
 
 ---
 
-## Features
+# Responsibilities
 
-- zero-downtime deploys
-- container-based
-- simple rollback
+Kamal handles:
+
+- image distribution
+- container orchestration
+- application rollout
+
+---
+
+# Benefits
+
+- simple infrastructure model
+- reproducible deployments
+- rollback support
+- production safety

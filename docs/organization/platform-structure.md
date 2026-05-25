@@ -24,41 +24,40 @@ erp-plus-company
 
 ---
 
-# Repository Relationships
+# Platform Components
 
 ## Documentation Repository
 
-erp-plus-docs documents:
+erp-plus-docs contains:
 
-- platform architecture
-- governance
-- workflows
-- engines
-- deployments
+- architecture documentation
+- governance documentation
+- development standards
+- operational documentation
 
 ---
 
 ## Host Application
 
-erp_plus is responsible for:
+erp_plus contains:
 
-- booting Rails
-- loading engines
-- configuring infrastructure
-- deployment orchestration
+- Rails application
+- engine integration
+- global configuration
+- routing
 
 ---
 
-## Engines
+## Domain Engines
 
-Each engine represents a business domain.
+Business functionality lives inside engines.
 
 Examples:
 
-- Accounts
-- Users
-- Inventory
-- Workers
+- erp_accounts
+- erp_users
+- erp_workers
+- erp_inventory
 
 Engines are not folders.
 
@@ -66,9 +65,9 @@ They are platform domains.
 
 ---
 
-# Architectural Rule
+# Architectural Principle
 
-All business functionality should live inside engines.
+Business logic belongs to engines.
 
 The host application should remain thin.
 
@@ -76,10 +75,10 @@ The host application should remain thin.
 
 # Long-Term Vision
 
-The platform should be able to grow by:
+The platform should grow by:
 
 - adding new engines
-- preserving domain boundaries
-- avoiding cross-domain coupling
+- preserving boundaries
+- avoiding tight coupling
 
 without requiring architectural rewrites.

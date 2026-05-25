@@ -1,16 +1,39 @@
 # Secrets Management
 
-Never commit:
-
-- .env files
-- credentials.yml.enc
-- master.key
+ERP Plus never stores secrets in source control.
 
 ---
 
-## Storage
+# Forbidden
 
-Secrets are managed via:
+Never commit:
+
+- .env
+- credentials.yml.enc
+- master.key
+- API keys
+- database passwords
+
+---
+
+# Approved Secret Storage
+
+Production secrets may be stored in:
 
 - GitHub Secrets
-- Kamal ENV injection
+- deployment environment variables
+- secure secret managers
+
+---
+
+# Secret Rotation
+
+Secrets should be rotated periodically.
+
+Critical credentials must support emergency rotation.
+
+---
+
+# Access Control
+
+Only authorized maintainers should have access to production secrets.

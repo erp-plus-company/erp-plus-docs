@@ -1,43 +1,86 @@
 # ERP Plus Documentation
 
-Welcome to the ERP Plus documentation site.
+Welcome to the official ERP Plus documentation.
 
-This documentation contains:
+ERP Plus is a modular ERP platform built as a Rails modular monolith using Engines.
 
-- Architecture overview
+This documentation is the central source of truth for:
+
+- Platform architecture
+- Organization structure
 - Engine design
-- Development workflows
-- Deployment strategy
-- Security model
+- Development practices
+- Deployment operations
+- Security policies
+- Architecture decisions (ADRs)
 
 ---
 
-## System Overview
+## Recommended Reading Path
 
-ERP Plus is a modular multi-account ERP platform built on:
+### 1. Understand the Platform
 
-- Ruby on Rails 8
-- Rails Engines architecture
-- Docker + Kamal deployment
-- GitHub CI/CD pipelines
+- Organization
+- System Blueprint
+- Architecture
+
+### 2. Understand the Product Structure
+
+- Engines
+- Multi-tenancy
+- Engine Contracts
+
+### 3. Start Contributing
+
+- Getting Started
+- Development
+- Security
+
+### 4. Operate the Platform
+
+- Deployment
+- Observability
+- Governance
+
+### 5. Understand Architectural Decisions
+
+- ADRs
 
 ---
 
-## Core Principles
+## Documentation Sections
 
-- Modular monolith architecture
-- Engine isolation
-- Cloud-native deployment
-- Security-first design
-- CI/CD automation
+| Section          | Purpose                                     |
+| ---------------- | ------------------------------------------- |
+| Organization     | GitHub organization and platform structure  |
+| System Blueprint | How ERP Plus works as a system              |
+| Architecture     | Architectural concepts and design           |
+| Engines          | Domain modules and responsibilities         |
+| Development      | Development workflow and contribution rules |
+| Deployment       | CI/CD and operational deployment            |
+| Security         | Security policies and practices             |
+| Decisions        | Architecture Decision Records (ADRs)        |
 
 ---
 
-## Navigation
+## Documentation Philosophy
 
-Use the sidebar to explore:
+ERP Plus documentation is organized from:
 
-- Architecture decisions
-- Engine documentation
-- Development guides
-- Deployment procedures
+```txt
+Organization
+    ↓
+System
+    ↓
+Architecture
+    ↓
+Engines
+    ↓
+Development
+    ↓
+Deployment
+    ↓
+Security
+```
+
+This structure allows new contributors to understand the platform progressively, from high-level concepts to implementation details.

@@ -19,7 +19,7 @@ Topics covered:
 - trade-offs
 - scalability model
 
-→ See: `modular-monolith.md`
+→ [Multi-tenancy](../architecture/memodular-monolith.md)
 
 ---
 
@@ -34,7 +34,7 @@ Topics covered:
 - domain boundaries
 - engine ownership
 
-→ See: `engines.md`
+→ [Multi-tenancy](../architecture/engines.md)
 
 ---
 
@@ -49,7 +49,7 @@ Topics covered:
 - request scoping
 - security boundaries
 
-→ See: `multitenancy.md`
+→ [Multi-tenancy](../architecture/multitenancy.md)
 
 ---
 

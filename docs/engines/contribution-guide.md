@@ -64,13 +64,13 @@ ErpUsers::Services::CreateUser.call(...)
 
 ---
 
-# ✔ Public Interfaces
+## ✔ Public Interfaces
 
 Defined contracts exposed by each engine.
 
 ---
 
-# ✔ Events (Future-ready design)
+## ✔ Events (Future-ready design)
 
 - domain events
 - message-based communication (future evolution)
@@ -114,8 +114,10 @@ mount ErpNewEngine::Engine, at: "/erp_new_engine"
 
 Each engine MUST clearly define:
 
+- purpose
 - domain responsibility
-- public API
+- dependencies
+- public APIs
 - internal services
 - models (if needed)
 
@@ -148,6 +150,7 @@ engines/erp_users/
 ├── config/
 ├── spec/
 └── erp_users.gemspec
+└── README.md
 ```
 
 ---
@@ -209,32 +212,6 @@ Each engine has:
 
 ---
 
-# 🚀 Contribution Workflow
-
-To modify an engine:
-
-## 1. Create feature branch
-
-```bash
-feature/<engine>/<change>
-```
-
-Example:
-
-```bash
-feature/erp_users/invitation-flow
-```
-
-## 2. Make changes inside engine ONLY
-
-Do NOT modify other engines.
-
-## 3. Add tests inside engine spec
-
-## 4. Open PR with engine scope clearly defined
-
----
-
 # 🔍 Engine Review Checklist
 
 Before approval:
@@ -245,20 +222,6 @@ Before approval:
 - [ ] Tests included
 - [ ] Multi-tenancy respected
 - [ ] No shared hidden logic introduced
-
----
-
-# 📦 Versioning Engines (IMPORTANT)
-
-Each engine SHOULD evolve independently.
-
-Future-ready model:
-
-```bash
-erp_users v1.0
-erp_inventory v1.0
-erp_workers v1.0
-```
 
 ---
 
@@ -290,3 +253,22 @@ With this guide:
 # 🧠 Final Definition
 
 > An engine is a fully isolated domain module that behaves like a mini-application inside a controlled monolith ecosystem.
+
+---
+
+# Related Documentation
+
+Architecture:
+
+→ [Architecture Engine](../architecture/engines.md)
+
+Contracts:
+
+→ [Contracts Engine](../system/engine-contracts.md)
+
+Development Process:
+
+development/workflow.md
+→ [Workflow](../development/workflow.md)
+→ [Feature lifecycle](../development/feature-lifecycle.md)
+→ [PR Standard](../development/pr-standard.md)

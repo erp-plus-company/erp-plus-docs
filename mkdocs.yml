@@ -24,59 +24,56 @@ theme:
 nav:
   - Home: index.md
 
-  - System Blueprint:
+  - Organization:
+      - Overview: organization/index.md
+      - Platform Structure: organization/platform-structure.md
+      - Repositories: organization/repositories.md
+      - Ownership Model: organization/ownership-model.md
+      - Visibility Model: organization/visibility-model.md
+
+  - System:
       - Overview: system/index.md
-      - Architecture Map: system/blueprint.md
-      - Engine Contracts: system/engine-contracts.md
+      - Blueprint: system/blueprint.md
       - Data Flow: system/data-flow.md
+      - Engine Contracts: system/engine-contracts.md
       - Roles and Access: system/roles-and-access.md
       - Governance and Evolution: system/governance-and-evolution.md
       - Observability and Operational Model: system/observability-and-operational-model.md
 
-  - Organization:
-      - Overview: organization/index.md
-      - Repositories: organization/repositories.md
-      - Visibility Model: organization/visibility-model.md
-      - Ownership Model: organization/ownership-model.md
-      - Platform Structure: organization/platform-structure.md
-
-  - Getting Started:
-      - Introduction: getting-started/index.md
-      - Installation: getting-started/installation.md
-      - First Run: getting-started/first-run.md
-
   - Architecture:
-      - Overview: architecture/index.md
+      - Reading Guide: architecture/index.md
       - Modular Monolith: architecture/modular-monolith.md
-      - Engines: architecture/engines.md
+      - Engines Overview: architecture/engines.md
       - Multi-tenancy: architecture/multitenancy.md
 
   - Engines:
-      - Contribution Guidelines: engines/contribution-guide.md
+      - Contribution Guide: engines/contribution-guide.md
       - Erp Core: engines/erp_core/index.md
       - Erp Accounts: engines/erp_accounts/index.md
       - Erp Users: engines/erp_users/index.md
       - Erp Workers: engines/erp_workers/index.md
       - Erp Inventory: engines/erp_inventory/index.md
 
+  - Getting Started:
+      - Introduction: getting-started/index.md
+      - Installation: getting-started/installation.md
+      - First Run: getting-started/first-run.md
+
   - Development:
       - Workflow: development/workflow.md
-      - Testing: development/testing.md
       - Standards: development/standards.md
+      - Testing: development/testing.md
       - PR Standards: development/pr-standards.md
       - Feature Lifecycle: development/feature-lifecycle.md
 
-  - Deployment:
+  - Operations:
       - CI/CD: deployment/ci-cd.md
-      - Kamal: deployment/kamal.md
       - Environments: deployment/environments.md
-      - PR Standards: deployment/pr-standards.md
+      - Kamal: deployment/kamal.md
       - Rollback: deployment/rollback.md
-
-  - Security:
-      - Policies: security/policies.md
-      - Secrets: security/secrets.md
-      - Vulnerabilities: security/vulnerabilities.md
+      - Security Policies: security/policies.md
+      - Secrets Management: security/secrets.md
+      - Vulnerability Handling: security/vulnerabilities.md
 
   - Decisions:
       - ADR 0001 Modular Monolith: decisions/adr-0001-modular-monolith.md

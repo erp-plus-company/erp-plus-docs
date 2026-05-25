@@ -15,11 +15,9 @@ Host Application.
 Responsibilities:
 
 - Rails boot process
-- Global configuration
 - Routing
-- Engine loading
-- CI/CD
-- Deployment
+- Global configuration
+- Engine integration
 
 ---
 
@@ -42,21 +40,23 @@ Responsibilities:
 
 # Engine Repositories
 
+Current domain repositories:
+
 ## erp_core
 
-Shared platform functionality.
+Shared platform capabilities and Authentication.
 
 ---
 
 ## erp_accounts
 
-Organizations and tenancy.
+Account and tenancy management.
 
 ---
 
 ## erp_users
 
-Users and authentication.
+User management.
 
 ---
 

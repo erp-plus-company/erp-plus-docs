@@ -56,7 +56,7 @@ If a PR is too large:
 
 Every PR MUST include:
 
-```txt id="pr-structure"
+```txt
 Summary
 Type of Change
 Related Engine(s)

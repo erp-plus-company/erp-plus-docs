@@ -18,7 +18,7 @@ It is:
 
 # 🚀 Feature Lifecycle Flow
 
-```txt id="flow"
+```txt
 Idea → Engine Selection → Branch → Implementation → Tests → PR → CI → Review → Merge → Deploy
 ```
 
@@ -58,7 +58,7 @@ Branch creation follows the official Development Workflow.
 
 See:
 
-→ workflow.md
+[Branch Creation](../development/workflow.md)
 
 ---
 
