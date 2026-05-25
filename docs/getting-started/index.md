@@ -36,25 +36,26 @@ This section is intended for:
 
 Set up your local environment.
 
-→ installation.md
+→ [Installation](installation.md)
 
 ### 2. First Run
 
 Start the platform and verify everything works correctly.
 
 → first-run.md
+[First run](first-run.md)
 
 ### 3. System Overview
 
 Understand the platform before modifying it.
 
-→ ../system/index.md
+→ [System Overview](../system/index.md)
 
 ### 4. Development Workflow
 
 Learn how contributions are made.
 
-→ ../development/workflow.md
+→ [Development Workflow](../development/workflow.md)
 
 ---
 
@@ -65,9 +66,3 @@ After completing this section you should be able to:
 - run ERP Plus locally
 - understand the platform structure
 - begin contributing safely
-
-<!-- ## Next Steps
-
-- [Installation](installation.md)
-- [Development Workflow](../development/workflow.md)
-- [Architecture Overview](../architecture/index.md) -->
