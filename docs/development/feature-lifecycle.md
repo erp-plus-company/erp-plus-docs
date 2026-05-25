@@ -54,13 +54,11 @@ Each feature MUST belong to one primary engine:
 
 # 3. 🌿 Branch Creation
 
-All work MUST start from develop:
+Branch creation follows the official Development Workflow.
 
-```bash
-git checkout develop
-git pull origin develop
-git checkout -b feature/my-feature
-```
+See:
+
+→ workflow.md
 
 ---
 

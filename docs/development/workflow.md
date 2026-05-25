@@ -1,42 +1,75 @@
 # Development Workflow
 
-ERP Plus follows a simplified Git flow.
+This document defines how contributors work inside ERP Plus.
 
 ---
 
-## Branches
+# Branch Strategy
 
-- main → production
-- develop → integration
-- feature/\* → new features
+## Main Branches
+
+| Branch     | Purpose      |
+| ---------- | ------------ |
+| main       | Production   |
+| develop    | Integration  |
+| feature/\* | New features |
+| fix/\*     | Bug fixes    |
 
 ---
 
-## Feature workflow
+# Creating a Feature
+
+Start from develop:
 
 ```bash
 git checkout develop
+git pull origin develop
+
 git checkout -b feature/my-feature
 ```
 
 ---
 
-## Pull Requests
+# Conventional Commits
 
-All PRs must:
+ERP Plus uses Conventional Commits.
 
-- pass CI
-- pass Rubocop
-- pass tests
-- be reviewed
+Examples:
+
+```bash
+feat(accounts): add invitation workflow
+
+fix(workers): resolve retry issue
+
+docs(system): improve architecture guide
+
+ci(release): update release workflow
+```
 
 ---
 
-## Commit style
+# Pull Requests
 
-We use Conventional Commits:
+All contributions must go through Pull Requests.
 
-- feat:
-- fix:
-- docs:
-- ci:
+Direct pushes to protected branches are forbidden.
+
+---
+
+# Merge Rules
+
+A Pull Request can only be merged when:
+
+- CI passes
+- tests pass
+- security checks pass
+- review is approved
+
+---
+
+# Related Documents
+
+- feature-lifecycle.md
+- pr-standard.md
+- testing.md
+- standards.md

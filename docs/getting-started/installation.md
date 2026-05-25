@@ -3,35 +3,42 @@
 ## Requirements
 
 - Ruby 3.3+
+- Rails 8.0+
 - PostgreSQL 16+
-- Node.js
-- Yarn
 - Docker (optional)
 
 ---
 
-## Setup
+## Clone Repository
 
 ```bash
 git clone --recurse-submodules git@github.com:erp-plus-company/erp_plus.git
 
 cd erp_plus
+```
 
+## Install Dependencies
+
+```bash
 bundle install
+```
 
+## Setup Environment
+
+```bash
 bin/setup
 ```
 
----
-
-## Run the application
+## Start Application
 
 ```bash
 bin/dev
 ```
 
-## Verify
+---
 
-Visit:
+## Next Step
 
-[http://localhost:3000](http://localhost:3000)
+Continue with:
+
+→ first-run.md
