@@ -4,7 +4,7 @@ This document describes how the ERP Plus repositories relate to each other.
 
 ---
 
-# High-Level Structure
+## High-Level Structure
 
 ```txt
 erp-plus-company
@@ -24,9 +24,9 @@ erp-plus-company
 
 ---
 
-# Platform Components
+## Platform Components
 
-## Documentation Repository
+### Documentation Repository
 
 erp-plus-docs contains:
 
@@ -37,7 +37,7 @@ erp-plus-docs contains:
 
 ---
 
-## Host Application
+### Host Application
 
 erp_plus contains:
 
@@ -48,7 +48,7 @@ erp_plus contains:
 
 ---
 
-## Domain Engines
+### Domain Engines
 
 Business functionality lives inside engines.
 
@@ -65,7 +65,7 @@ They are platform domains.
 
 ---
 
-# Architectural Principle
+## Architectural Principle
 
 Business logic belongs to engines.
 
@@ -73,7 +73,7 @@ The host application should remain thin.
 
 ---
 
-# Long-Term Vision
+## Long-Term Vision
 
 The platform should grow by:
 
