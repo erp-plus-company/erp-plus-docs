@@ -19,7 +19,7 @@ Topics covered:
 - trade-offs
 - scalability model
 
-→ [Modular Monolith](../architecture/memodular-monolith.md)
+→ [Modular Monolith](../architecture/modular-monolith.md)
 
 ---
 
