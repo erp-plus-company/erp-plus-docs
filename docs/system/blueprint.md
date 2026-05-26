@@ -1,10 +1,10 @@
-# 🧠 ERP Plus System Blueprint
+# ERP Plus System Blueprint
 
 This document is the **master blueprint of ERP Plus**, combining architecture, engines, data flow, and system design into a single mental model.
 
 ---
 
-# 🧭 What is ERP Plus?
+## What is ERP Plus?
 
 ERP Plus is a:
 
@@ -12,7 +12,7 @@ ERP Plus is a:
 
 ---
 
-# 🧠 System Identity
+## System Identity
 
 ERP Plus is NOT:
 
@@ -26,7 +26,7 @@ ERP Plus IS:
 
 ---
 
-# 🏗 Global Architecture Map
+## Global Architecture Map
 
 ```bash
 ERP Plus System
@@ -57,7 +57,7 @@ ERP Plus System
 
 ---
 
-# 🔄 System Flow (Unified Model)
+## System Flow (Unified Model)
 
 Every action in ERP Plus follows this pattern:
 
@@ -73,13 +73,13 @@ Request
 
 ---
 
-# 🔌 Engine System Model
+## Engine System Model
 
 Each engine behaves as:
 
 > a bounded context inside a controlled monolith
 
-## Engine Responsibilities
+### Engine Responsibilities
 
 Each engine MUST:
 
@@ -88,7 +88,7 @@ Each engine MUST:
 - avoid internal leakage
 - respect account boundaries
 
-## Engine Isolation Model
+### Engine Isolation Model
 
 ```bash
 erp_inventory ❌ cannot access erp_users internals
@@ -98,21 +98,21 @@ erp_core ✔ shared utilities only
 
 ---
 
-# 🧩 Communication Model
+## Communication Model
 
 Engines communicate ONLY via:
 
-## 1. Public Services
+### 1. Public Services
 
 ```ruby
 ErpInventory::ProductService.create(...)
 ```
 
-## 2. Domain Interfaces
+### 2. Domain Interfaces
 
 Defined explicitly per engine.
 
-## 3. Future: Domain Events
+### 3. Future: Domain Events
 
 Planned evolution toward:
 
@@ -121,7 +121,7 @@ Planned evolution toward:
 
 ---
 
-# 🏢 Multi-Account Model
+## Multi-Account Model
 
 ERP Plus is account-first:
 
@@ -137,7 +137,7 @@ User → Account → Data Scope → Engine Logic
 
 ---
 
-# ⚙️ Execution Model
+## Execution Model
 
 Domain logic is executed inside engines:
 
@@ -146,7 +146,7 @@ Domain logic is executed inside engines:
 
 ---
 
-# 🔁 Background System
+## Background System
 
 erp_workers handles:
 
@@ -163,7 +163,7 @@ Engine → Job → Queue → Worker → Side Effect → Persistence
 
 ---
 
-# 🔐 Security Model
+## Security Model
 
 Security is enforced at multiple layers:
 
@@ -175,7 +175,7 @@ Security is enforced at multiple layers:
 
 ---
 
-# 📦 Infrastructure Model
+## Infrastructure Model
 
 ERP Plus runs on:
 
@@ -187,33 +187,33 @@ ERP Plus runs on:
 
 ---
 
-# 🧠 System Design Principles
+## System Design Principles
 
 ERP Plus follows:
 
-## 1. Isolation
+### 1. Isolation
 
 Engines are independent bounded contexts.
 
-## 2. Explicit Communication
+### 2. Explicit Communication
 
 No hidden coupling between engines.
 
-## 3. Account-first Design
+### 3. Account-first Design
 
 Everything is multi-account by default.
 
-## 4. Infrastructure Awareness
+### 4. Infrastructure Awareness
 
 System is designed for real production deployment.
 
-## 5. Security by Default
+### 5. Security by Default
 
 Security is built into every layer.
 
 ---
 
-# 🧠 Mental Model (MOST IMPORTANT)
+## Mental Model (MOST IMPORTANT)
 
 Think of ERP Plus as:
 
@@ -223,7 +223,7 @@ A single system composed of isolated domain engines connected through controlled
 
 ---
 
-# 🚀 Scaling Model
+## Scaling Model
 
 ERP Plus scales by:
 
@@ -234,7 +234,7 @@ ERP Plus scales by:
 
 ---
 
-# 🧭 Final System View
+## Final System View
 
 ```bash
 User → Identity → Account → Domain Engine → Worker → Response
@@ -242,7 +242,7 @@ User → Identity → Account → Domain Engine → Worker → Response
 
 ---
 
-# ⚡ Why this blueprint exists
+## Why this blueprint exists
 
 This file is the:
 
@@ -254,7 +254,7 @@ This file is the:
 
 ---
 
-# 🧠 Final Statement
+## Final Statement
 
 ERP Plus is:
 

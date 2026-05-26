@@ -1,10 +1,10 @@
-# 🔓 Visibility Model
+# Visibility Model
 
 ERP Plus follows a public-by-default documentation model.
 
 ---
 
-# Public Information
+## Public Information
 
 The following information should be public whenever possible:
 
@@ -24,7 +24,7 @@ Purpose:
 
 ---
 
-# Private Information
+## Private Information
 
 The following information must remain private:
 
@@ -38,7 +38,7 @@ The following information must remain private:
 
 ---
 
-# Guiding Principle
+## Guiding Principle
 
 If the information helps understand ERP Plus:
 
@@ -50,7 +50,7 @@ If the information helps operate production systems:
 
 ---
 
-# Documentation Policy
+## Documentation Policy
 
 Architecture documentation belongs in:
 

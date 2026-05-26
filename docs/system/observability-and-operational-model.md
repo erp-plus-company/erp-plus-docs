@@ -1,4 +1,4 @@
-# 📡 ERP Plus Observability & Operational Model
+# ERP Plus Observability & Operational Model
 
 This document defines how ERP Plus is observed, monitored, debugged, and operated in production.
 
@@ -6,7 +6,7 @@ It ensures the system is not only well-designed, but also **fully operable at sc
 
 ---
 
-# 🧠 Core Principle
+## Core Principle
 
 ERP Plus is not a black box.
 
@@ -16,13 +16,13 @@ It is:
 
 ---
 
-# 🔍 Observability Layers
+## Observability Layers
 
 ERP Plus observability is divided into 4 layers:
 
 ---
 
-## 1. Request Tracing Layer
+### 1. Request Tracing Layer
 
 Every request MUST be traceable across:
 
@@ -41,7 +41,7 @@ Each request MUST have a:
 - account_id
 - user_id
 
-## 2. Engine-Level Observability
+### 2. Engine-Level Observability
 
 Each engine MUST expose:
 
@@ -58,7 +58,7 @@ erp_inventory:
   - service execution logs
 ```
 
-## 3. Background Job Observability
+### 3. Background Job Observability
 
 All async jobs (erp_workers) MUST include:
 
@@ -68,7 +68,7 @@ All async jobs (erp_workers) MUST include:
 - execution status
 - failure reason (if any)
 
-## 4. System Metrics Layer
+### 4. System Metrics Layer
 
 ERP Plus tracks:
 
@@ -80,7 +80,7 @@ ERP Plus tracks:
 
 ---
 
-# 📊 Logging Strategy
+## Logging Strategy
 
 Logs MUST be:
 
@@ -103,7 +103,7 @@ Example:
 
 ---
 
-# 🔁 Debugging Flow (CRITICAL)
+## Debugging Flow (CRITICAL)
 
 When something breaks:
 
@@ -118,7 +118,7 @@ When something breaks:
 
 ---
 
-# ⚙️ Operational Model
+## Operational Model
 
 ERP Plus production is operated via:
 
@@ -130,7 +130,7 @@ ERP Plus production is operated via:
 
 ---
 
-# 🚨 Error Handling Strategy
+## Error Handling Strategy
 
 Errors MUST:
 
@@ -142,7 +142,7 @@ Errors MUST:
 
 ---
 
-# 🔐 Security Observability
+## Security Observability
 
 Security events MUST be tracked:
 
@@ -153,7 +153,7 @@ Security events MUST be tracked:
 
 ---
 
-# 📦 Account Observability
+## Account Observability
 
 Each account has:
 
@@ -164,7 +164,7 @@ Each account has:
 
 ---
 
-# 🧩 Engine Observability Contract
+## Engine Observability Contract
 
 Each engine MUST implement:
 
@@ -175,28 +175,28 @@ Each engine MUST implement:
 
 ---
 
-# 🚀 Operational Responsibilities
+## Operational Responsibilities
 
-## Backend Engineers
+### Backend Engineers
 
 - ensure logs are emitted correctly
 - trace services properly
 - handle domain errors
 
-## DevOps Engineers
+### DevOps Engineers
 
 - monitor system health
 - configure alerts
 - maintain observability pipelines
 - manage deployments
 
-## QA Engineers
+### QA Engineers
 
 - validate error scenarios
 - ensure trace completeness
 - reproduce system issues
 
-## Frontend Engineers
+### Frontend Engineers
 
 - propagate trace_id
 - report errors with context
@@ -204,7 +204,7 @@ Each engine MUST implement:
 
 ---
 
-# 📈 Scaling Observability
+## Scaling Observability
 
 As ERP Plus grows:
 
@@ -215,7 +215,7 @@ As ERP Plus grows:
 
 ---
 
-🧠 Mental Model
+## Mental Model
 
 ERP Plus is:
 
@@ -223,7 +223,7 @@ ERP Plus is:
 
 ---
 
-# ⚡ Why this matters
+## Why this matters
 
 Without observability:
 
@@ -238,7 +238,9 @@ With observability:
 - ✔ safe scaling
 - ✔ predictable operations
 
-🧠 Final System State
+---
+
+## Final System State
 
 ERP Plus is now:
 

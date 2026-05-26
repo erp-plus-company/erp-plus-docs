@@ -1,4 +1,4 @@
-# 🧠 ERP Plus Governance & System Evolution
+# ERP Plus Governance & System Evolution
 
 This document defines how ERP Plus evolves over time in a controlled, predictable, and scalable way.
 
@@ -6,7 +6,7 @@ It ensures the system does NOT degrade as features and teams grow.
 
 ---
 
-# 🧭 Core Principle
+## Core Principle
 
 ERP Plus is NOT static.
 
@@ -16,13 +16,13 @@ It is:
 
 ---
 
-# ⚙️ Governance Model
+## Governance Model
 
 ERP Plus evolves under 4 governance rules:
 
 ---
 
-## 1. Architectural Consistency
+### 1. Architectural Consistency
 
 Any change MUST respect:
 
@@ -33,7 +33,7 @@ Any change MUST respect:
 
 ---
 
-## 2. Controlled Evolution
+### 2. Controlled Evolution
 
 Changes are introduced through:
 
@@ -44,7 +44,7 @@ Changes are introduced through:
 
 ---
 
-## 3. No Hidden Coupling
+### 3. No Hidden Coupling
 
 The system MUST prevent:
 
@@ -55,7 +55,7 @@ The system MUST prevent:
 
 ---
 
-## 4. Backward Compatibility First
+### 4. Backward Compatibility First
 
 Breaking changes are allowed ONLY if:
 
@@ -65,7 +65,7 @@ Breaking changes are allowed ONLY if:
 
 ---
 
-# 🔄 Evolution Flow
+## Evolution Flow
 
 Every meaningful system change follows:
 
@@ -75,7 +75,7 @@ Idea → ADR (optional) → Implementation → CI Validation → Review → Merg
 
 ---
 
-# 📦 Versioning Strategy
+## Versioning Strategy
 
 ERP Plus uses semantic versioning per engine conceptually:
 
@@ -87,18 +87,18 @@ PATCH → fixes and internal improvements
 
 ---
 
-# 🔌 Engine Evolution Rules
+## Engine Evolution Rules
 
 Each engine evolves independently but under system constraints:
 
-## Allowed:
+### Allowed:
 
 - adding new services
 - extending public APIs
 - internal refactoring
 - improving performance
 
-## Forbidden:
+### Forbidden:
 
 - breaking public contracts without versioning
 - accessing other engine internals
@@ -107,17 +107,17 @@ Each engine evolves independently but under system constraints:
 
 ---
 
-# 🧠 Deprecation Strategy
+## Deprecation Strategy
 
 When removing or changing behavior:
 
-## Step 1 — Mark as Deprecated
+### Step 1 — Mark as Deprecated
 
 ```bash
 Feature marked as deprecated in docs + code comments
 ```
 
-## Step 2 — Migration Path
+### Step 2 — Migration Path
 
 Provide:
 
@@ -125,7 +125,7 @@ Provide:
 - migration guide
 - timeline
 
-## Step 3 — Removal (Later Release)
+### Step 3 — Removal (Later Release)
 
 Only after:
 
@@ -135,7 +135,7 @@ Only after:
 
 ---
 
-# 📚 ADR Governance
+## ADR Governance
 
 Architecture Decisions MUST be documented when:
 
@@ -144,7 +144,7 @@ Architecture Decisions MUST be documented when:
 - modifying account system
 - altering authentication model
 
-## ADR Format
+### ADR Format
 
 ```bash
 ADR-XXXX: Title
@@ -155,7 +155,7 @@ Consequences
 
 ---
 
-# 🚀 CI/CD as Governance Layer
+## CI/CD as Governance Layer
 
 CI is NOT just testing.
 
@@ -168,7 +168,7 @@ It enforces governance:
 
 ---
 
-# 🔐 Security Governance
+## Security Governance
 
 Security changes must:
 
@@ -179,25 +179,25 @@ Security changes must:
 
 ---
 
-# 🧩 System Stability Rules
+## System Stability Rules
 
 ERP Plus prioritizes:
 
-## 1. Stability over speed
+### 1. Stability over speed
 
 No architectural shortcuts in production.
 
-## 2. Explicit over implicit
+### 2. Explicit over implicit
 
 All behavior must be documented or visible in code.
 
-## 3. Isolation over convenience
+### 3. Isolation over convenience
 
 Engines remain independent even if it costs complexity.
 
 ---
 
-# 🧠 Scaling Governance
+## Scaling Governance
 
 As teams grow:
 
@@ -208,7 +208,7 @@ As teams grow:
 
 ---
 
-# ⚠️ Anti-Patterns (CRITICAL)
+## Anti-Patterns (CRITICAL)
 
 Avoid:
 
@@ -219,7 +219,7 @@ Avoid:
 
 ---
 
-# 🧠 Mental Model
+## Mental Model
 
 ERP Plus evolves like:
 
@@ -229,7 +229,7 @@ Controlled ecosystem where every change is validated, documented, and bounded by
 
 ---
 
-# 🚀 Final System Vision
+## Final System Vision
 
 ERP Plus is:
 
@@ -237,7 +237,7 @@ ERP Plus is:
 
 ---
 
-# 🧭 What This Enables
+## What This Enables
 
 - ✔ long-term scalability
 - ✔ multi-team development

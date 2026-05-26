@@ -1,10 +1,10 @@
-# 🔌 Engine Contracts — ERP Plus
+# Engine Contracts — ERP Plus
 
 This document defines the **official architectural contract** for all Rails Engines inside ERP Plus.
 
 ---
 
-# 🧠 What is an Engine?
+## What is an Engine?
 
 An ERP Plus engine is a **self-contained domain module** inside the modular monolith.
 
@@ -18,7 +18,7 @@ Each engine represents a business capability, such as:
 
 ---
 
-# ⚠️ Core Principle
+## Core Principle
 
 > Engines are independent, but not isolated from the system.
 
@@ -26,7 +26,7 @@ They must interact through **explicit contracts**, not implicit coupling.
 
 ---
 
-# 🧩 Engine Structure Standard
+## Engine Structure Standard
 
 Every engine MUST follow this structure:
 
@@ -43,7 +43,7 @@ engines/erp_example/
 
 ---
 
-# 🔒 Engine Responsibilities
+## Engine Responsibilities
 
 Each engine MUST:
 
@@ -54,7 +54,7 @@ Each engine MUST:
 
 ---
 
-# ❌ Forbidden Rules (CRITICAL)
+## Forbidden Rules (CRITICAL)
 
 Engines MUST NOT:
 
@@ -66,11 +66,11 @@ Engines MUST NOT:
 
 ---
 
-# 🔌 Communication Between Engines
+## Communication Between Engines
 
 All communication MUST happen through:
 
-## 1. Public Services
+### 1. Public Services
 
 Example:
 
@@ -78,7 +78,7 @@ Example:
 ErpUsers::UserService.create_user(...)
 ```
 
-## 2. Domain APIs
+### 2. Domain APIs
 
 Each engine may expose:
 
@@ -86,7 +86,7 @@ Each engine may expose:
 - query objects
 - facades
 
-## 3. Events (Future Design)
+### 3. Events (Future Design)
 
 Planned architecture evolution:
 
@@ -95,7 +95,7 @@ Planned architecture evolution:
 
 ---
 
-# 📦 Public API Requirement
+## Public API Requirement
 
 Each engine MUST expose a public interface file:
 
@@ -111,17 +111,17 @@ This file defines:
 
 ---
 
-# 🧠 Dependency Rules
+## Dependency Rules
 
 Engine dependencies MUST follow these rules:
 
-## Allowed
+### Allowed
 
 - `erp_core` can be used by all engines
 - `erp_accounts` can be referenced by domain services
 - shared utilities only via `erp_core`
 
-## Forbidden
+### Forbidden
 
 - circular dependencies between engines
 - direct model coupling
@@ -129,7 +129,7 @@ Engine dependencies MUST follow these rules:
 
 ---
 
-# 🧪 Testing Contract
+## Testing Contract
 
 Each engine MUST be tested in isolation:
 
@@ -139,7 +139,7 @@ Each engine MUST be tested in isolation:
 
 ---
 
-# 📦 Versioning Strategy (IMPORTANT)
+## Versioning Strategy (IMPORTANT)
 
 Each engine SHOULD be versioned logically:
 
@@ -156,7 +156,7 @@ Rules:
 
 ---
 
-# 🔐 Security Boundary
+## Security Boundary
 
 Each engine is responsible for:
 
@@ -171,7 +171,7 @@ Security is enforced at:
 
 ---
 
-# 🚀 Scaling Model
+## Scaling Model
 
 ERP Plus scales by:
 
@@ -181,7 +181,7 @@ ERP Plus scales by:
 
 ---
 
-# 🧠 Mental Model
+## Mental Model
 
 Think of each engine as:
 
@@ -189,7 +189,7 @@ Think of each engine as:
 
 ---
 
-# ⚡ Why this document matters
+## Why this document matters
 
 This is the document that ensures:
 
@@ -200,7 +200,7 @@ This is the document that ensures:
 
 ---
 
-# 🧭 Summary
+## Summary
 
 If you follow this contract:
 

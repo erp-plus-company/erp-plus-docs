@@ -1,12 +1,12 @@
-# 👥 Ownership Model
+# Ownership Model
 
 ERP Plus is designed to support multiple engineering disciplines.
 
 ---
 
-# Engineering Roles
+## Engineering Roles
 
-## Backend Engineers
+### Backend Engineers
 
 Responsibilities:
 
@@ -17,7 +17,7 @@ Responsibilities:
 
 ---
 
-## Frontend Engineers
+### Frontend Engineers
 
 Responsibilities:
 
@@ -27,7 +27,7 @@ Responsibilities:
 
 ---
 
-## DevOps Engineers
+### DevOps Engineers
 
 Responsibilities:
 
@@ -38,7 +38,7 @@ Responsibilities:
 
 ---
 
-## QA Engineers
+### QA Engineers
 
 Responsibilities:
 
@@ -48,7 +48,7 @@ Responsibilities:
 
 ---
 
-## Platform Architects
+### Platform Architects
 
 Responsibilities:
 
@@ -59,7 +59,7 @@ Responsibilities:
 
 ---
 
-# Repository Ownership
+## Repository Ownership
 
 Example ownership model:
 
@@ -75,7 +75,7 @@ Ownership may evolve as teams grow.
 
 ---
 
-# Decision Authority
+## Decision Authority
 
 Architecture decisions should be documented using ADRs.
 

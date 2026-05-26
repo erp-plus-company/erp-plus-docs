@@ -1,12 +1,12 @@
-# 📦 Repositories
+# Repositories
 
 This document describes the repositories that compose ERP Plus.
 
 ---
 
-# Core Repositories
+## Core Repositories
 
-## erp_plus
+### erp_plus
 
 Role:
 
@@ -21,7 +21,7 @@ Responsibilities:
 
 ---
 
-## erp-plus-docs
+### erp-plus-docs
 
 Role:
 
@@ -38,41 +38,41 @@ Responsibilities:
 
 ---
 
-# Engine Repositories
+## Engine Repositories
 
 Current domain repositories:
 
-## erp_core
+### erp_core
 
 Shared platform capabilities and Authentication.
 
 ---
 
-## erp_accounts
+### erp_accounts
 
 Account and tenancy management.
 
 ---
 
-## erp_users
+### erp_users
 
 User management.
 
 ---
 
-## erp_workers
+### erp_workers
 
 Background processing.
 
 ---
 
-## erp_inventory
+### erp_inventory
 
 Inventory management.
 
 ---
 
-# Future Repositories
+## Future Repositories
 
 Potential future repositories:
 
@@ -85,7 +85,7 @@ Potential future repositories:
 
 ---
 
-# Infrastructure Repositories
+## Infrastructure Repositories
 
 Possible future infrastructure repositories:
 

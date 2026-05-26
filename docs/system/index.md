@@ -1,4 +1,4 @@
-# 🧠 ERP Plus System Overview
+# ERP Plus System Overview
 
 ERP Plus is a modular multi-account ERP platform built as a **modular monolith using Rails Engines**.
 
@@ -6,11 +6,11 @@ Its design follows strict boundaries, clear ownership per module, and a scalable
 
 ---
 
-# 🧭 System Philosophy
+## System Philosophy
 
 ERP Plus is built on 5 core principles:
 
-## 1. Modular Monolith Architecture
+### 1. Modular Monolith Architecture
 
 The system is a single Rails application composed of isolated engines.
 
@@ -22,7 +22,7 @@ Each engine is:
 
 ---
 
-## 2. Engine Isolation
+### 2. Engine Isolation
 
 Engines must NOT:
 
@@ -38,7 +38,7 @@ Communication MUST happen through:
 
 ---
 
-## 3. Multi-Tenancy First
+### 3. Multi-Tenancy First
 
 The system is designed to support multiple account from day one.
 
@@ -51,7 +51,7 @@ Tenancy rules apply across:
 
 ---
 
-## 4. Infrastructure-Aware Design
+### 4. Infrastructure-Aware Design
 
 ERP Plus is designed to run in production using:
 
@@ -63,7 +63,7 @@ ERP Plus is designed to run in production using:
 
 ---
 
-## 5. Security by Default
+### 5. Security by Default
 
 Security is not optional:
 
@@ -75,7 +75,7 @@ Security is not optional:
 
 ---
 
-# 🏗 System Architecture
+## System Architecture
 
 ```bash
 ERP Plus
@@ -103,17 +103,17 @@ ERP Plus
 
 ---
 
-# 🔌 Engine Communication Model
+## Engine Communication Model
 
 Engines interact using strict rules:
 
-## Allowed:
+### Allowed:
 
 - calling public services
 - using shared interfaces
 - event-based communication (future)
 
-## Forbidden:
+### Forbidden:
 
 - direct model access across engines
 - cross-engine business logic leakage
@@ -121,29 +121,29 @@ Engines interact using strict rules:
 
 ---
 
-# 👥 System Roles (Mental Model)
+## System Roles (Mental Model)
 
 ERP Plus assumes these system actors:
 
-## Backend Developer
+### Backend Developer
 
 - builds engines
 - defines domain logic
 - owns APIs
 
-## Frontend Developer
+### Frontend Developer
 
 - consumes engine outputs
 - builds UI via APIs
 - does NOT touch domain rules
 
-## DevOps Engineer
+### DevOps Engineer
 
 - owns CI/CD pipelines
 - manages deployments
 - monitors infrastructure
 
-## QA Engineer
+### QA Engineer
 
 - validates behavior
 - ensures regression safety
@@ -151,7 +151,7 @@ ERP Plus assumes these system actors:
 
 ---
 
-# 🚀 Deployment Model
+## Deployment Model
 
 ERP Plus uses:
 
@@ -165,7 +165,7 @@ Flow:
 
 ---
 
-📊 Scaling Strategy
+## Scaling Strategy
 
 ERP Plus scales by:
 
@@ -176,7 +176,7 @@ ERP Plus scales by:
 
 ---
 
-# 🔐 Security Model
+## Security Model
 
 - secrets managed outside repo
 - Brakeman static analysis in CI
@@ -186,7 +186,7 @@ ERP Plus scales by:
 
 ---
 
-# 📚 Documentation Structure
+## Documentation Structure
 
 This documentation is structured to serve:
 
@@ -199,7 +199,7 @@ Each section of docs is designed for a different **audience lens**, not a differ
 
 ---
 
-# 🧠 Final Mental Model
+## Final Mental Model
 
 ERP Plus is:
 
@@ -207,7 +207,7 @@ ERP Plus is:
 
 ---
 
-# ⚡ Why this file is critical
+## Why this file is critical
 
 This file becomes:
 

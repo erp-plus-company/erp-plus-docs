@@ -1,4 +1,4 @@
-# 👥 ERP Plus Roles & Access Model
+# ERP Plus Roles & Access Model
 
 This document defines how different roles interact with the ERP Plus system and documentation.
 
@@ -6,7 +6,7 @@ It is designed for **startup → enterprise scale onboarding clarity**.
 
 ---
 
-# 🧠 Core Principle
+## Core Principle
 
 ERP Plus documentation is NOT flat.
 
@@ -18,7 +18,7 @@ Different users should NOT consume the same depth of system information.
 
 ---
 
-# 🧭 Role-Based Documentation Model
+## Role-Based Documentation Model
 
 ERP Plus defines 4 primary roles:
 
@@ -33,11 +33,11 @@ Each role has a different lens into the system.
 
 ---
 
-# 🔵 Backend Developer View
+## Backend Developer View
 
-## Access Level: FULL DOMAIN LAYER
+### Access Level: FULL DOMAIN LAYER
 
-### Backend developers can access:
+#### Backend developers can access:
 
 → [Architecture](../architecture/index.md)
 
@@ -49,25 +49,25 @@ Each role has a different lens into the system.
 
 → [Decisions (ADRs)](../decisions/adr-0001-modular-monolith.md)
 
-### Responsibilities:
+#### Responsibilities:
 
 - implement engine logic
 - define domain rules
 - maintain services
 - ensure engine isolation
 
-### Forbidden:
+#### Forbidden:
 
 - modifying infrastructure without review
 - bypassing engine contracts
 
 ---
 
-# 🟣 Frontend Developer View
+## Frontend Developer View
 
-## Access Level: API CONSUMER ONLY
+### Access Level: API CONSUMER ONLY
 
-### Frontend developers can access:
+#### Frontend developers can access:
 
 → [System](../system/index.md)
 
@@ -77,13 +77,13 @@ Each role has a different lens into the system.
 
 - API contracts (future section)
 
-### Responsibilities:
+#### Responsibilities:
 
 - consume backend APIs
 - build UI/UX
 - avoid domain logic
 
-### Forbidden:
+#### Forbidden:
 
 - touching engine logic
 - modifying backend services
@@ -91,11 +91,11 @@ Each role has a different lens into the system.
 
 ---
 
-# 🔴 DevOps Engineer View
+## DevOps Engineer View
 
-## Access Level: INFRASTRUCTURE + DEPLOYMENT
+### Access Level: INFRASTRUCTURE + DEPLOYMENT
 
-### DevOps engineers can access:
+#### DevOps engineers can access:
 
 → [Environments](../deployment/environments.md)
 
@@ -107,14 +107,14 @@ Each role has a different lens into the system.
 
 → [architecture (infrastructure sections)](../architecture/index.md)
 
-### Responsibilities:
+#### Responsibilities:
 
 - CI/CD pipelines
 - deployments (Kamal)
 - monitoring
 - security enforcement
 
-### Forbidden:
+#### Forbidden:
 
 - modifying domain logic
 - altering business rules
@@ -122,11 +122,11 @@ Each role has a different lens into the system.
 
 ---
 
-# 🟡 QA Engineer View
+## QA Engineer View
 
-## Access Level: SYSTEM BEHAVIOR ONLY
+### Access Level: SYSTEM BEHAVIOR ONLY
 
-### QA engineers can access:
+#### QA engineers can access:
 
 → [System](../system/index.md)
 
@@ -138,13 +138,13 @@ Each role has a different lens into the system.
 
 → [Decisions (ADRs)](../decisions/adr-0001-modular-monolith.md)
 
-### Responsibilities:
+#### Responsibilities:
 
 - validate system behavior
 - ensure regression safety
 - test engines independently
 
-### Forbidden:
+#### Forbidden:
 
 - modifying production logic
 - implementing features
@@ -152,13 +152,13 @@ Each role has a different lens into the system.
 
 ---
 
-# 🧠 Documentation Visibility Rules
+## Documentation Visibility Rules
 
 Not all documentation is equal.
 
 ---
 
-# 🔓 Public Layer (All Roles)
+## Public Layer (All Roles)
 
 → [System](../system/index.md)
 
@@ -170,7 +170,7 @@ Not all documentation is equal.
 
 ---
 
-# 🔐 Technical Layer (Engineers Only)
+## Technical Layer (Engineers Only)
 
 → [Engines](../engines/contribution-guide.md)
 
@@ -180,7 +180,7 @@ Not all documentation is equal.
 
 ---
 
-# 🔒 Operational Layer (DevOps Only)
+## Operational Layer (DevOps Only)
 
 → [Environments](../deployment/environments.md)
 
@@ -190,17 +190,17 @@ Not all documentation is equal.
 
 ---
 
-# 🧠 Decision Layer (All Engineers)
+## Decision Layer (All Engineers)
 
 → [Decisions](../decisions/adr-0001-modular-monolith.md)
 
 ---
 
-# 🚀 Onboarding Flow (REAL WORLD)
+## Onboarding Flow (REAL WORLD)
 
 When a new developer joins:
 
-## Step 1 — System Understanding
+### Step 1 — System Understanding
 
 Read:
 
@@ -208,7 +208,7 @@ Read:
 
 → [Blueprint](../system/blueprint.md)
 
-## Step 2 — Architecture Understanding
+### Step 2 — Architecture Understanding
 
 Read:
 
@@ -218,7 +218,7 @@ Read:
 
 → [Engine Contracts](../system/engine-contracts.md)
 
-## Step 3 — Role-Specific Deep Dive
+### Step 3 — Role-Specific Deep Dive
 
 Depending on role:
 
@@ -230,7 +230,7 @@ Depending on role:
 
 - QA → [Testing](../development/testing.md)
 
-## Step 4 — First Contribution
+### Step 4 — First Contribution
 
 Must follow:
 
@@ -244,7 +244,7 @@ CONTRIBUTING.md
 
 ---
 
-# 🧠 Key Insight
+## Key Insight
 
 ERP Plus is NOT documented like a project.
 
@@ -254,7 +254,7 @@ It is documented like:
 
 ---
 
-# ⚠️ WHY THIS MATTERS (CRITICAL)
+## WHY THIS MATTERS (CRITICAL)
 
 Without this model:
 
@@ -266,7 +266,7 @@ Without this model:
 
 ---
 
-# 🚀 SCALING IMPACT
+## SCALING IMPACT
 
 This structure enables:
 
@@ -278,7 +278,7 @@ This structure enables:
 
 ---
 
-# 🧠 FINAL MENTAL MODEL
+## FINAL MENTAL MODEL
 
 ```bash
 Same system → different perspectives → controlled knowledge exposure

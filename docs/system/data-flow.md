@@ -1,10 +1,10 @@
-# 🔄 ERP Plus Data Flow
+# ERP Plus Data Flow
 
 This document explains how data flows through ERP Plus when a real user interacts with the system.
 
 ---
 
-# 🧠 Core Concept
+## Core Concept
 
 ERP Plus is not a set of isolated engines.
 
@@ -12,7 +12,7 @@ It is a **single system where requests travel through multiple bounded contexts 
 
 ---
 
-# 🚀 High-Level Request Flow
+## High-Level Request Flow
 
 Every request in ERP Plus follows this pipeline:
 
@@ -28,7 +28,7 @@ User Request
 
 ---
 
-# 🔐 Step 1 — Authentication (erp_users)
+## Step 1 — Authentication (erp_users)
 
 When a request enters the system:
 
@@ -44,7 +44,7 @@ CurrentUser context is established
 
 ---
 
-# 🏢 Step 2 — Account Resolution (erp_accounts)
+## Step 2 — Account Resolution (erp_accounts)
 
 Next step:
 
@@ -60,7 +60,7 @@ CurrentAccount is attached to request context
 
 ---
 
-# 🔒 Step 3 — Authorization Layer
+## Step 3 — Authorization Layer
 
 After authentication + account:
 
@@ -74,13 +74,13 @@ Important:
 
 ---
 
-# ⚙️ Step 4 — Domain Engine Execution
+## Step 4 — Domain Engine Execution
 
 Now the request enters the correct engine:
 
 Example flows:
 
-## 🧑 Users Engine
+### Users Engine
 
 ```bash
 Create user
@@ -88,7 +88,7 @@ Update profile
 Manage roles
 ```
 
-## 📦 Inventory Engine
+### Inventory Engine
 
 ```bash
 Create product
@@ -96,7 +96,7 @@ Update stock
 Reserve inventory
 ```
 
-# 👷 Workers Engine
+## Workers Engine
 
 Used when:
 
@@ -111,7 +111,7 @@ Example:
 
 ---
 
-# 🔁 Step 5 — Background Processing (erp_workers)
+## Step 5 — Background Processing (erp_workers)
 
 If the engine triggers async work:
 
@@ -127,7 +127,7 @@ Engine → Job Queue → Worker → Execution → DB update / side effect
 
 ---
 
-# 📡 Step 6 — Response Assembly
+## Step 6 — Response Assembly
 
 Finally:
 
@@ -135,26 +135,26 @@ Finally:
 - serialized
 - sent to frontend/API consumer
 
-## 🧩 Cross-Engine Communication Rules
+### Cross-Engine Communication Rules
 
 Engines NEVER communicate directly.
 
 Allowed patterns:
 
-### 1. Service Calls
+#### 1. Service Calls
 
 ```ruby
 ErpAccounts::AccountService.resolve(...)
 ```
 
-### 2. Domain Events (future evolution)
+#### 2. Domain Events (future evolution)
 
 Planned:
 
 - event-driven communication
 - decoupled execution between engines
 
-## ❌ Forbidden Flow
+### Forbidden Flow
 
 Engines MUST NOT:
 
@@ -163,9 +163,9 @@ Engines MUST NOT:
 - share internal state
 - depend on internal logic of other engines
 
-## 🧠 Real Example Flow
+### Real Example Flow
 
-### Scenario: User creates a product
+#### Scenario: User creates a product
 
 ```bash
 1. User logged in → erp_core
@@ -177,14 +177,14 @@ Engines MUST NOT:
 7. Response returned
 ```
 
-## ⚡ Key Insight
+### Key Insight
 
 ERP Plus is:
 
 > not a collection of engines
 > but a controlled data flow system across bounded contexts
 
-## 🧠 Mental Model
+### Mental Model
 
 Think of ERP Plus as:
 
@@ -198,7 +198,7 @@ NOT:
 - independent apps
 - microservices
 
-## 🚀 Why this document is critical
+### Why this document is critical
 
 This ensures:
 
@@ -208,7 +208,7 @@ This ensures:
 - ✔ architecture remains consistent
 - ✔ engines don’t become chaotic
 
-## 🧭 Summary
+### Summary
 
 If you understand this flow:
 
