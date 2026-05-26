@@ -70,6 +70,9 @@ A Pull Request can only be merged when:
 # Related Documents
 
 → [Feature Lifecycle](../development/feature-lifecycle.md)
+
 → [PR Standards](../development/pr-standard.md)
+
 → [Testing](../development/testing.md)
+
 → [Standards](../development/standards.md)

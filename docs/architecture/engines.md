@@ -60,9 +60,13 @@ Engines allow ERP Plus to:
 Detailed engine documentation:
 
 → [erp_core](../engines/erp_core/index.md)
+
 → [erp_accounts](../engines/erp_accounts/index.md)
+
 → [erp_users](../engines/erp_users/index.md)
+
 → [erp_workers](../engines/erp_workers/index.md)
+
 → [erp_inventory](../engines/erp_inventory/index.md)
 
 Engine behavior and rules:

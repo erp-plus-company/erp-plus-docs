@@ -268,7 +268,8 @@ Contracts:
 
 Development Process:
 
-development/workflow.md
 → [Workflow](../development/workflow.md)
+
 → [Feature lifecycle](../development/feature-lifecycle.md)
+
 → [PR Standard](../development/pr-standard.md)

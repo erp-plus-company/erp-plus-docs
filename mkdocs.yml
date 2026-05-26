@@ -63,7 +63,7 @@ nav:
       - Workflow: development/workflow.md
       - Standards: development/standards.md
       - Testing: development/testing.md
-      - PR Standards: development/pr-standards.md
+      - PR Standards: development/pr-standard.md
       - Feature Lifecycle: development/feature-lifecycle.md
 
   - Operations:
