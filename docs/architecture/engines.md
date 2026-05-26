@@ -6,7 +6,7 @@ Each engine owns a specific business capability and acts as a bounded context in
 
 ---
 
-# Engine Map
+## Engine Map
 
 | Engine        | Responsibility                       |
 | ------------- | ------------------------------------ |
@@ -18,7 +18,7 @@ Each engine owns a specific business capability and acts as a bounded context in
 
 ---
 
-# Platform Structure
+## Platform Structure
 
 ```txt
 ERP Plus
@@ -32,7 +32,7 @@ ERP Plus
 
 ---
 
-# Architectural Principles
+## Architectural Principles
 
 All engines must:
 
@@ -43,7 +43,7 @@ All engines must:
 
 ---
 
-# Why Engines Exist
+## Why Engines Exist
 
 Engines allow ERP Plus to:
 
@@ -55,7 +55,7 @@ Engines allow ERP Plus to:
 
 ---
 
-# Related Documentation
+## Related Documentation
 
 Detailed engine documentation:
 
