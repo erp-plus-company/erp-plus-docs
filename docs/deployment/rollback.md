@@ -1,16 +1,16 @@
-# ⏪ Rollback Strategy
+# Rollback Strategy
 
 This document defines how ERP Plus recovers from failed releases.
 
 ---
 
-# Goal
+## Goal
 
 Restore service safely when a deployment introduces problems.
 
 ---
 
-# Git Rollback
+## Git Rollback
 
 For code-level rollback:
 
@@ -20,7 +20,7 @@ git revert <commit>
 
 ---
 
-# Kamal Rollback
+## Kamal Rollback
 
 For deployment rollback:
 
@@ -28,7 +28,7 @@ Restore the previous application version through Kamal deployment history.
 
 ---
 
-# Rollback Principles
+## Rollback Principles
 
 - rollback must be fast
 - rollback must be traceable
@@ -36,6 +36,6 @@ Restore the previous application version through Kamal deployment history.
 
 ---
 
-# Production Rule
+## Production Rule
 
 Every release must have a clear rollback path before deployment.

@@ -1,10 +1,10 @@
-# 🚀 CI/CD Pipeline
+# CI/CD Pipeline
 
 ERP Plus uses GitHub Actions as its CI/CD platform.
 
 ---
 
-# Purpose
+## Purpose
 
 The pipeline guarantees:
 
@@ -15,7 +15,7 @@ The pipeline guarantees:
 
 ---
 
-# Pipeline Flow
+## Pipeline Flow
 
 ```txt
 Commit
@@ -33,41 +33,41 @@ Release
 Deploy
 ```
 
-# Validation Stages
+## Validation Stages
 
-## Rubocop
+### Rubocop
 
 Checks code style consistency.
 
-## RSpec
+### RSpec
 
 Runs automated tests.
 
-## Brakeman
+### Brakeman
 
 Runs security analysis.
 
-## Build Validation
+### Build Validation
 
 Ensures the application can be built successfully.
 
 ---
 
-# Branch Behavior
+## Branch Behavior
 
-## develop
+### develop
 
 - validation only
 - no production deployment
 
-## main
+### main
 
 - release branch
 - production deployment source
 
 ---
 
-# Success Criteria
+## Success Criteria
 
 A Pull Request is considered valid only when:
 

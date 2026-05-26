@@ -4,9 +4,9 @@ ERP Plus follows a security-first approach.
 
 ---
 
-# Core Principles
+## Core Principles
 
-## Least Privilege
+### Least Privilege
 
 Users and services should only have the permissions they require.
 

@@ -1,10 +1,10 @@
-# 🌎 Environments
+# Environments
 
 ERP Plus uses multiple environments throughout the delivery lifecycle.
 
 ---
 
-# Development
+## Development
 
 Purpose:
 
@@ -18,7 +18,7 @@ Characteristics:
 
 ---
 
-# Staging
+## Staging
 
 Purpose:
 
@@ -32,7 +32,7 @@ Characteristics:
 
 ---
 
-# Production
+## Production
 
 Purpose:
 
@@ -46,7 +46,7 @@ Characteristics:
 
 ---
 
-# Configuration Management
+## Configuration Management
 
 Configuration is managed using:
 

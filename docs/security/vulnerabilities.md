@@ -4,14 +4,14 @@ ERP Plus continuously validates security posture.
 
 ---
 
-# Detection Tools
+## Detection Tools
 
 - Brakeman
 - Dependabot
 
 ---
 
-# Reporting
+## Reporting
 
 Security issues should be reported privately.
 
@@ -19,7 +19,7 @@ Do not open public issues for active vulnerabilities.
 
 ---
 
-# Remediation Process
+## Remediation Process
 
 1. Identify vulnerability
 2. Assess impact
@@ -30,7 +30,7 @@ Do not open public issues for active vulnerabilities.
 
 ---
 
-# Severity Levels
+## Severity Levels
 
 - Critical
 - High

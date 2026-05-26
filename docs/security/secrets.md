@@ -4,7 +4,7 @@ ERP Plus never stores secrets in source control.
 
 ---
 
-# Forbidden
+## Forbidden
 
 Never commit:
 
@@ -16,7 +16,7 @@ Never commit:
 
 ---
 
-# Approved Secret Storage
+## Approved Secret Storage
 
 Production secrets may be stored in:
 
@@ -26,7 +26,7 @@ Production secrets may be stored in:
 
 ---
 
-# Secret Rotation
+## Secret Rotation
 
 Secrets should be rotated periodically.
 
@@ -34,6 +34,6 @@ Critical credentials must support emergency rotation.
 
 ---
 
-# Access Control
+## Access Control
 
 Only authorized maintainers should have access to production secrets.

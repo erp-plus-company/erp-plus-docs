@@ -1,10 +1,10 @@
-# 🚢 Kamal Deployment
+# Kamal Deployment
 
 ERP Plus uses Kamal for application deployment.
 
 ---
 
-# Purpose
+## Purpose
 
 Kamal provides:
 
@@ -15,7 +15,7 @@ Kamal provides:
 
 ---
 
-# Environment Injection
+## Environment Injection
 
 Deployment configuration is injected through:
 
@@ -25,7 +25,7 @@ Deployment configuration is injected through:
 
 ---
 
-# Deployment Flow
+## Deployment Flow
 
 ```bash
 bin/kamal deploy
@@ -33,7 +33,7 @@ bin/kamal deploy
 
 ---
 
-# Responsibilities
+## Responsibilities
 
 Kamal handles:
 
@@ -43,7 +43,7 @@ Kamal handles:
 
 ---
 
-# Benefits
+## Benefits
 
 - simple infrastructure model
 - reproducible deployments
