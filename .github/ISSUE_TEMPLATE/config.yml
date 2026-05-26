@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: ERP Plus Application
+    url: https://github.com/erp-plus-company/erp_plus
+    about: Report application bugs, feature requests, or security issues.
