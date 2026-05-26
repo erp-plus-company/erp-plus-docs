@@ -9,17 +9,53 @@ site_url: https://erp-plus-company.github.io/erp-plus-docs/
 
 theme:
   name: material
+
+  logo: assets/images/logo.jpg
+  favicon: assets/images/logo.jpg
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   palette:
     - scheme: default
-      primary: orange
-      accent: grey
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.instant
-    - toc.integrate
+
+    - navigation.top
+
+    - search.highlight
+
+    - toc.follow
+
     - content.code.copy
+
+  extra_css:
+    - assets/stylesheets/extra.css
+
+  extra:
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/erp-plus-company
+
+  copyright: >
+    Copyright © ERP Plus Company
 
 nav:
   - Home: index.md

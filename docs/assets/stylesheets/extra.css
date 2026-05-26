@@ -1,0 +1,28 @@
+:root {
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fb923c;
+  --md-primary-fg-color--dark: #ea580c;
+
+  --md-accent-fg-color: #f97316;
+}
+
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.md-nav__title {
+  font-weight: 700;
+}
+
+.md-nav__link--active {
+  color: #f97316;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 700;
+}
