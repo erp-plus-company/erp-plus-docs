@@ -8,13 +8,13 @@ Each engine owns a specific business capability and acts as a bounded context in
 
 ## Engine Map
 
-| Engine        | Responsibility                       |
-| ------------- | ------------------------------------ |
-| erp_core      | Shared platform services             |
-| erp_accounts  | Organizations and account management |
-| erp_users     | Authentication and user management   |
-| erp_workers   | Background jobs and async processing |
-| erp_inventory | Inventory and stock management       |
+| Engine        | Responsibility                              |
+| ------------- | ------------------------------------------- |
+| erp_core      | Shared platform services and Authentication |
+| erp_accounts  | Organizations and account management        |
+| erp_users     | user management                             |
+| erp_workers   | Background jobs and async processing        |
+| erp_inventory | Inventory and stock management              |
 
 ---
 
