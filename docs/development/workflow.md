@@ -4,9 +4,9 @@ This document defines how contributors work inside ERP Plus.
 
 ---
 
-# Branch Strategy
+## Branch Strategy
 
-## Main Branches
+### Main Branches
 
 | Branch     | Purpose      |
 | ---------- | ------------ |
@@ -17,7 +17,7 @@ This document defines how contributors work inside ERP Plus.
 
 ---
 
-# Creating a Feature
+## Creating a Feature
 
 Start from develop:
 
@@ -30,7 +30,7 @@ git checkout -b feature/my-feature
 
 ---
 
-# Conventional Commits
+## Conventional Commits
 
 ERP Plus uses Conventional Commits.
 
@@ -48,7 +48,7 @@ ci(release): update release workflow
 
 ---
 
-# Pull Requests
+## Pull Requests
 
 All contributions must go through Pull Requests.
 
@@ -56,7 +56,7 @@ Direct pushes to protected branches are forbidden.
 
 ---
 
-# Merge Rules
+## Merge Rules
 
 A Pull Request can only be merged when:
 
@@ -67,7 +67,7 @@ A Pull Request can only be merged when:
 
 ---
 
-# Related Documents
+## Related Documents
 
 → [Feature Lifecycle](../development/feature-lifecycle.md)
 

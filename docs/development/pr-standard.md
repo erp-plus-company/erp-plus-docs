@@ -1,4 +1,4 @@
-# 🔁 Pull Request Standard (ERP Plus)
+# Pull Request Standard (ERP Plus)
 
 This document defines the **official Pull Request contract** for ERP Plus.
 
@@ -6,7 +6,7 @@ Every contributor MUST follow this standard to ensure consistency, safety, and s
 
 ---
 
-# 🧠 Core Principle
+## Core Principle
 
 A Pull Request is not just a code change.
 
@@ -16,9 +16,9 @@ It is:
 
 ---
 
-# 📦 PR Scope Rules
+## PR Scope Rules
 
-## ✔️ Allowed scope
+### Allowed scope
 
 A PR MUST belong to:
 
@@ -27,7 +27,7 @@ A PR MUST belong to:
 
 ---
 
-## ❌ Forbidden scope
+### Forbidden scope
 
 A PR must NOT:
 
@@ -38,7 +38,7 @@ A PR must NOT:
 
 ---
 
-# 🧩 PR Size Rule
+## PR Size Rule
 
 PRs MUST be:
 
@@ -52,7 +52,7 @@ If a PR is too large:
 
 ---
 
-# 🧠 PR Structure (Required)
+## PR Structure (Required)
 
 Every PR MUST include:
 
@@ -69,11 +69,11 @@ Deployment Notes
 
 ---
 
-# 🔍 Validation Requirements
+## Validation Requirements
 
 Before requesting review:
 
-## The PR MUST:
+### The PR MUST:
 
 - pass CI pipeline
 - pass RSpec tests
@@ -83,7 +83,7 @@ Before requesting review:
 
 ---
 
-# 🧪 Testing Requirements
+## Testing Requirements
 
 - feature changes → feature specs required
 - domain logic → unit tests required
@@ -91,7 +91,7 @@ Before requesting review:
 
 ---
 
-# 🧠 Engine Awareness Rule
+## Engine Awareness Rule
 
 Every PR MUST clearly declare:
 
@@ -101,7 +101,7 @@ Every PR MUST clearly declare:
 
 ---
 
-# 🔗 Cross-Engine Rules
+## Cross-Engine Rules
 
 Cross-engine changes are allowed ONLY if:
 
@@ -111,7 +111,7 @@ Cross-engine changes are allowed ONLY if:
 
 ---
 
-# 🧾 Commit Traceability
+## Commit Traceability
 
 Every PR SHOULD map cleanly to:
 
@@ -121,7 +121,7 @@ Every PR SHOULD map cleanly to:
 
 ---
 
-# 👀 Review Requirements
+## Review Requirements
 
 A PR is NOT valid until:
 
@@ -131,7 +131,7 @@ A PR is NOT valid until:
 
 ---
 
-# 🚀 Merge Rules
+## Merge Rules
 
 Only maintainers can merge into:
 
@@ -146,7 +146,7 @@ All merges MUST:
 
 ---
 
-# ⚡ Definition of Done
+## Definition of Done
 
 A PR is DONE when:
 
@@ -158,7 +158,7 @@ A PR is DONE when:
 
 ---
 
-# 🧠 Mental Model
+## Mental Model
 
 ```bash
 Feature → Engine → PR → CI → Review → Merge → Deploy
@@ -166,6 +166,6 @@ Feature → Engine → PR → CI → Review → Merge → Deploy
 
 ---
 
-# 📦 Summary
+## Summary
 
 > A PR in ERP Plus is a controlled architectural unit, not just a code change.

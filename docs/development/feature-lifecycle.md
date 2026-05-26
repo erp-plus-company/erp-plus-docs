@@ -1,4 +1,4 @@
-# 🔄 Feature Lifecycle (ERP Plus)
+# Feature Lifecycle (ERP Plus)
 
 This document defines the **end-to-end lifecycle of a feature** inside ERP Plus.
 
@@ -6,7 +6,7 @@ It ensures that every change follows a predictable, scalable engineering flow.
 
 ---
 
-# 🧠 Core Principle
+## Core Principle
 
 A feature is not just code.
 
@@ -16,7 +16,7 @@ It is:
 
 ---
 
-# 🚀 Feature Lifecycle Flow
+## Feature Lifecycle Flow
 
 ```txt
 Idea → Engine Selection → Branch → Implementation → Tests → PR → CI → Review → Merge → Deploy
@@ -24,7 +24,7 @@ Idea → Engine Selection → Branch → Implementation → Tests → PR → CI 
 
 ---
 
-# 1. 💡 Idea Phase
+## 1. Idea Phase
 
 Every feature starts with:
 
@@ -38,7 +38,7 @@ It MUST be assigned to:
 
 ---
 
-# 2. 🧭 Engine Selection
+## 2. Engine Selection
 
 Each feature MUST belong to one primary engine:
 
@@ -52,7 +52,7 @@ Each feature MUST belong to one primary engine:
 
 ---
 
-# 3. 🌿 Branch Creation
+## 3. Branch Creation
 
 Branch creation follows the official Development Workflow.
 
@@ -62,7 +62,7 @@ See:
 
 ---
 
-# 4. 🛠 Implementation Phase
+## 4. Implementation Phase
 
 Rules:
 
@@ -73,7 +73,7 @@ Rules:
 
 ---
 
-# 5. 🧪 Testing Phase
+## 5. Testing Phase
 
 Every feature MUST include:
 
@@ -87,7 +87,7 @@ bundle exec rspec
 
 ---
 
-# 6. 🔁 Pull Request Phase
+## 6. Pull Request Phase
 
 PR MUST:
 
@@ -98,7 +98,7 @@ PR MUST:
 
 ---
 
-# 7. ⚙️ CI Phase
+## 7. CI Phase
 
 CI validates:
 
@@ -113,7 +113,7 @@ If CI fails:
 
 ---
 
-# 8. 👀 Review Phase
+## 8. Review Phase
 
 Review checks:
 
@@ -124,7 +124,7 @@ Review checks:
 
 ---
 
-# 9. 🔀 Merge Phase
+## 9. Merge Phase
 
 Once approved:
 
@@ -133,7 +133,7 @@ Once approved:
 
 ---
 
-# 10. 🚀 Deploy Phase
+## 10. Deploy Phase
 
 Deployment flow:
 
@@ -143,7 +143,7 @@ Merge → CI → Docker Build → Kamal Deploy → Production
 
 ---
 
-# 🧠 Rules Summary
+## Rules Summary
 
 - every feature belongs to one engine
 - no feature bypasses CI
@@ -152,7 +152,7 @@ Merge → CI → Docker Build → Kamal Deploy → Production
 
 ---
 
-# 📊 Feature Lifecycle Mental Model
+## Feature Lifecycle Mental Model
 
 ```bash
 Idea → Engine → Branch → Code → Tests → PR → CI → Review → Merge → Deploy
@@ -160,7 +160,7 @@ Idea → Engine → Branch → Code → Tests → PR → CI → Review → Merge
 
 ---
 
-# ⚡ Why this matters
+## Why this matters
 
 Without this lifecycle:
 
@@ -178,6 +178,6 @@ With this lifecycle:
 
 ---
 
-# 🧠 Final Definition
+## Final Definition
 
 > A feature in ERP Plus is a controlled lifecycle unit inside a bounded engine, validated by CI and governed by architecture rules.
