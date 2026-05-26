@@ -1,4 +1,4 @@
-# 🏗 Platform Structure
+# Platform Structure
 
 This document describes how the ERP Plus repositories relate to each other.
 
