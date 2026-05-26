@@ -1,10 +1,10 @@
-# 🏢 ERP Plus Organization
+# ERP Plus Organization
 
 The ERP Plus GitHub organization (`erp-plus-company`) exists to host and govern all repositories that compose the ERP Plus platform.
 
 ---
 
-# Mission
+## Mission
 
 ERP Plus is designed as a modular ERP platform built for:
 
@@ -21,7 +21,7 @@ The organization provides the structure required to:
 
 ---
 
-# Why an Organization Instead of a Single Repository?
+## Why an Organization Instead of a Single Repository?
 
 ERP Plus is not a single application.
 
@@ -35,7 +35,7 @@ It is a platform composed of:
 
 ---
 
-# Governance Principles
+## Governance Principles
 
 The organization follows these principles:
 
@@ -47,7 +47,7 @@ The organization follows these principles:
 
 ---
 
-# Organization Components
+## Organization Components
 
 The organization currently contains:
 
@@ -59,7 +59,7 @@ Additional repositories may be introduced as the platform evolves.
 
 ---
 
-# Relationship to ERP Plus
+## Relationship to ERP Plus
 
 The organization is the governance layer.
 

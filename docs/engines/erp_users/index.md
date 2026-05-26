@@ -4,13 +4,13 @@ ERP Users manages user lifecycle and identity inside ERP Plus.
 
 ---
 
-# Purpose
+## Purpose
 
 ERP Users provides all user-related functionality.
 
 ---
 
-# Responsibilities
+## Responsibilities
 
 ERP Users manages:
 
@@ -21,23 +21,23 @@ ERP Users manages:
 
 ---
 
-# Domain Concepts
+## Domain Concepts
 
-## User
+### User
 
 Represents a person using ERP Plus.
 
-## Membership
+### Membership
 
 Represents a user's relationship to an organization.
 
-## Invitation
+### Invitation
 
 Represents onboarding access to the platform.
 
 ---
 
-# Public APIs
+## Public APIs
 
 Examples:
 
@@ -49,7 +49,7 @@ ErpUsers::MembershipService
 
 ---
 
-# Dependencies
+## Dependencies
 
 May depend on:
 
@@ -62,7 +62,7 @@ Should not depend on:
 
 ---
 
-# Boundaries
+## Boundaries
 
 ERP Users MUST NOT:
 
@@ -72,7 +72,7 @@ ERP Users MUST NOT:
 
 ---
 
-# Security Responsibilities
+## Security Responsibilities
 
 ERP Users is responsible for:
 
@@ -82,7 +82,7 @@ ERP Users is responsible for:
 
 ---
 
-# Future Evolution
+## Future Evolution
 
 Potential future modules:
 
@@ -93,7 +93,7 @@ Potential future modules:
 
 ---
 
-# Ownership
+## Ownership
 
 Primary Owner:
 

@@ -4,7 +4,7 @@ This document defines the official rules for **creating, modifying, and maintain
 
 ---
 
-# 🧠 Core Philosophy
+## 🧠 Core Philosophy
 
 Each engine in ERP Plus is:
 
@@ -16,7 +16,7 @@ They are **mini-products inside the system**.
 
 ---
 
-# 🏗 Engine Types
+## 🏗 Engine Types
 
 | Engine        | Responsibility                                                      |
 | ------------- | ------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ They are **mini-products inside the system**.
 
 ---
 
-# 🚨 Engine Rules (NON-NEGOTIABLE)
+## 🚨 Engine Rules (NON-NEGOTIABLE)
 
 Every engine MUST:
 
@@ -40,7 +40,7 @@ Every engine MUST:
 
 ---
 
-# ❌ Forbidden Patterns
+## ❌ Forbidden Patterns
 
 Engines MUST NOT:
 
@@ -52,11 +52,11 @@ Engines MUST NOT:
 
 ---
 
-# 🔌 Allowed Communication Patterns
+## 🔌 Allowed Communication Patterns
 
 Engines CAN communicate only via:
 
-## ✔ Public Services
+### ✔ Public Services
 
 ```ruby
 ErpUsers::Services::CreateUser.call(...)
@@ -64,28 +64,28 @@ ErpUsers::Services::CreateUser.call(...)
 
 ---
 
-## ✔ Public Interfaces
+### ✔ Public Interfaces
 
 Defined contracts exposed by each engine.
 
 ---
 
-## ✔ Events (Future-ready design)
+### ✔ Events (Future-ready design)
 
 - domain events
 - message-based communication (future evolution)
 
 ---
 
-# 🧱 Creating a New Engine
+## 🧱 Creating a New Engine
 
-## Step 1 — Generate engine
+### Step 1 — Generate engine
 
 ```bash
 rails plugin new engines/erp_new_engine --full --mountable
 ```
 
-## Step 2 — Register engine
+### Step 2 — Register engine
 
 Add to main application:
 
@@ -95,14 +95,14 @@ Add to main application:
 config.paths.add "engines/erp_new_engine/lib"
 ```
 
-## Step 3 — Define namespace
+### Step 3 — Define namespace
 
 ```ruby
 module ErpNewEngine
 end
 ```
 
-## Step 4 — Mount engine
+### Step 4 — Mount engine
 
 ```ruby
 # config/routes.rb
@@ -110,7 +110,7 @@ end
 mount ErpNewEngine::Engine, at: "/erp_new_engine"
 ```
 
-## Step 5 — Define engine boundaries
+### Step 5 — Define engine boundaries
 
 Each engine MUST clearly define:
 
@@ -123,7 +123,7 @@ Each engine MUST clearly define:
 
 ---
 
-# 🧪 Engine Testing Rules
+## 🧪 Engine Testing Rules
 
 Every engine MUST include:
 
@@ -137,7 +137,7 @@ bundle exec rspec engines/erp_users
 
 ---
 
-# 🧠 Engine Structure Standard
+## 🧠 Engine Structure Standard
 
 ```bash
 engines/erp_users/
@@ -155,17 +155,17 @@ engines/erp_users/
 
 ---
 
-# 🔒 Engine Isolation Rules
+## 🔒 Engine Isolation Rules
 
 Engines MUST:
 
-## ✔ Allowed
+### ✔ Allowed
 
 - call public services from other engines
 - use shared interfaces
 - use core engine primitives
 
-## ❌ Not allowed
+### ❌ Not allowed
 
 - direct model access across engines
 - internal service calls between engines
@@ -173,7 +173,7 @@ Engines MUST:
 
 ---
 
-# 🧠 Dependency Direction Rule
+## 🧠 Dependency Direction Rule
 
 Engine dependencies MUST flow like this:
 
@@ -188,7 +188,7 @@ Never reverse dependencies.
 
 ---
 
-# 🧩 Core Engine Responsibility
+## 🧩 Core Engine Responsibility
 
 **erp_core**
 
@@ -202,7 +202,7 @@ BUT:
 
 ---
 
-# 👥 Ownership Model
+## 👥 Ownership Model
 
 Each engine has:
 
@@ -212,7 +212,7 @@ Each engine has:
 
 ---
 
-# 🔍 Engine Review Checklist
+## 🔍 Engine Review Checklist
 
 Before approval:
 
@@ -225,7 +225,7 @@ Before approval:
 
 ---
 
-# 🧠 Mental Model
+## 🧠 Mental Model
 
 ```bash
 Engine = Mini Product inside ERP Plus
@@ -233,7 +233,7 @@ Engine = Mini Product inside ERP Plus
 
 ---
 
-# ⚡ Why this exists
+## ⚡ Why this exists
 
 Without this guide:
 
@@ -250,13 +250,13 @@ With this guide:
 
 ---
 
-# 🧠 Final Definition
+## 🧠 Final Definition
 
 > An engine is a fully isolated domain module that behaves like a mini-application inside a controlled monolith ecosystem.
 
 ---
 
-# Related Documentation
+## Related Documentation
 
 Architecture:
 

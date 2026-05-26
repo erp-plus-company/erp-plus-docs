@@ -11,12 +11,21 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
-.md-nav__title {
-  font-weight: 700;
+.md-tabs {
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .md-nav__link--active {
   color: #f97316;
+  font-weight: 600;
+}
+
+.md-typeset a {
+  color: #f97316;
+}
+
+.md-typeset a:hover {
+  color: #ea580c;
 }
 
 h1 {

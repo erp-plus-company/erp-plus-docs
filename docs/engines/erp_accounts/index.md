@@ -4,13 +4,13 @@ ERP Accounts provides the multi-tenancy foundation of ERP Plus.
 
 ---
 
-# Purpose
+## Purpose
 
 ERP Accounts ensures that all platform data is scoped correctly to an organization.
 
 ---
 
-# Responsibilities
+## Responsibilities
 
 ERP Accounts manages:
 
@@ -21,19 +21,19 @@ ERP Accounts manages:
 
 ---
 
-# Domain Concepts
+## Domain Concepts
 
-## Organization
+### Organization
 
 Represents a business entity using ERP Plus.
 
-## Account Context
+### Account Context
 
 Defines the current tenant scope for a request.
 
 ---
 
-# Public APIs
+## Public APIs
 
 Examples:
 
@@ -44,7 +44,7 @@ ErpAccounts::OrganizationService
 
 ---
 
-# Dependencies
+## Dependencies
 
 May depend on:
 
@@ -57,7 +57,7 @@ Should not depend on:
 
 ---
 
-# Boundaries
+## Boundaries
 
 ERP Accounts MUST NOT:
 
@@ -67,7 +67,7 @@ ERP Accounts MUST NOT:
 
 ---
 
-# Security Responsibilities
+## Security Responsibilities
 
 ERP Accounts is responsible for:
 
@@ -77,7 +77,7 @@ ERP Accounts is responsible for:
 
 ---
 
-# Future Evolution
+## Future Evolution
 
 Potential future modules:
 
@@ -87,7 +87,7 @@ Potential future modules:
 
 ---
 
-# Ownership
+## Ownership
 
 Primary Owner:
 

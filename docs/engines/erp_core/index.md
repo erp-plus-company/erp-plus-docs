@@ -6,7 +6,7 @@ It provides shared platform capabilities used across all domain engines.
 
 ---
 
-# Purpose
+## Purpose
 
 ERP Core exists to provide:
 
@@ -17,7 +17,7 @@ ERP Core exists to provide:
 
 ---
 
-# Responsibilities
+## Responsibilities
 
 ERP Core is responsible for:
 
@@ -30,7 +30,7 @@ ERP Core is responsible for:
 
 ---
 
-# Public APIs
+## Public APIs
 
 Examples:
 
@@ -43,7 +43,7 @@ Only public services should be consumed by other engines.
 
 ---
 
-# Dependencies
+## Dependencies
 
 ERP Core should have minimal dependencies.
 
@@ -53,7 +53,7 @@ ERP Core should avoid depending on domain engines.
 
 ---
 
-# Boundaries
+## Boundaries
 
 ERP Core MUST NOT:
 
@@ -64,7 +64,7 @@ ERP Core MUST NOT:
 
 ---
 
-# Stability Requirements
+## Stability Requirements
 
 ERP Core should evolve slowly.
 
@@ -72,7 +72,7 @@ Changes inside ERP Core may affect the entire platform.
 
 ---
 
-# Future Evolution
+## Future Evolution
 
 Possible future responsibilities:
 
@@ -82,7 +82,7 @@ Possible future responsibilities:
 
 ---
 
-# Ownership
+## Ownership
 
 Primary Owner:
 

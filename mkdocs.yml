@@ -46,16 +46,16 @@ theme:
 
     - content.code.copy
 
-  extra_css:
-    - assets/stylesheets/extra.css
+extra_css:
+  - assets/stylesheets/extra.css
 
-  extra:
-    social:
-      - icon: fontawesome/brands/github
-        link: https://github.com/erp-plus-company
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/erp-plus-company
 
-  copyright: >
-    Copyright © ERP Plus Company
+copyright: >
+  Copyright © ERP Plus Company
 
 nav:
   - Home: index.md

@@ -40,9 +40,13 @@ Each role has a different lens into the system.
 ### Backend developers can access:
 
 → [Architecture](../architecture/index.md)
+
 → [Engines](../engines/contribution-guide.md)
+
 → [System](../system/index.md)
+
 → [Development](../development/workflow.md)
+
 → [Decisions (ADRs)](../decisions/adr-0001-modular-monolith.md)
 
 ### Responsibilities:
@@ -66,7 +70,9 @@ Each role has a different lens into the system.
 ### Frontend developers can access:
 
 → [System](../system/index.md)
+
 → [Architecture](../architecture/index.md)
+
 → [Getting Started](../getting-started/index.md)
 
 - API contracts (future section)
@@ -92,9 +98,13 @@ Each role has a different lens into the system.
 ### DevOps engineers can access:
 
 → [Environments](../deployment/environments.md)
+
 → [Security](../security/policies.md)
+
 → [System](../system/index.md)
+
 → [CI/CD documentation](../deployment/ci-cd.md)
+
 → [architecture (infrastructure sections)](../architecture/index.md)
 
 ### Responsibilities:
@@ -119,9 +129,13 @@ Each role has a different lens into the system.
 ### QA engineers can access:
 
 → [System](../system/index.md)
+
 → [Architecture](../architecture/index.md)
+
 → [Engines](../engines/contribution-guide.md)
+
 → [Testing docs](../development/testing.md)
+
 → [Decisions (ADRs)](../decisions/adr-0001-modular-monolith.md)
 
 ### Responsibilities:
@@ -147,8 +161,11 @@ Not all documentation is equal.
 # 🔓 Public Layer (All Roles)
 
 → [System](../system/index.md)
+
 → [Blueprint](../system/blueprint.md)
+
 → [Getting Started](../getting-started/index.md)
+
 → [Architecture](../architecture/index.md)
 
 ---
@@ -156,7 +173,9 @@ Not all documentation is equal.
 # 🔐 Technical Layer (Engineers Only)
 
 → [Engines](../engines/contribution-guide.md)
+
 → [Modular Monolith](../architecture/modular-monolith.md)
+
 → [Engines Overview](../architecture/engines.md)
 
 ---
@@ -164,7 +183,9 @@ Not all documentation is equal.
 # 🔒 Operational Layer (DevOps Only)
 
 → [Environments](../deployment/environments.md)
+
 → [Security Policies](../security/policies.md)
+
 → [CI/CD](../deployment/ci-cd.md)
 
 ---
@@ -184,6 +205,7 @@ When a new developer joins:
 Read:
 
 → [Overview](../system/index.md)
+
 → [Blueprint](../system/blueprint.md)
 
 ## Step 2 — Architecture Understanding
@@ -191,7 +213,9 @@ Read:
 Read:
 
 → [Reading Guide](../architecture/index.md)
+
 → [Data Flow](../system/data-flow.md)
+
 → [Engine Contracts](../system/engine-contracts.md)
 
 ## Step 3 — Role-Specific Deep Dive
@@ -199,8 +223,11 @@ Read:
 Depending on role:
 
 - backend → [Contribution Guide](../engines/contribution-guide.md)
+
 - frontend → [Overview](../system/index.md)
+
 - devops → [CI/CD](../deployment/ci-cd.md)
+
 - QA → [Testing](../development/testing.md)
 
 ## Step 4 — First Contribution
@@ -211,8 +238,9 @@ Must follow:
 CONTRIBUTING.md
 ```
 
-[CI/CD](../deployment/ci-cd.md)
-[Contribution Guide](../engines/contribution-guide.md)
+→ [CI/CD](../deployment/ci-cd.md)
+
+→ [Contribution Guide](../engines/contribution-guide.md)
 
 ---
 
