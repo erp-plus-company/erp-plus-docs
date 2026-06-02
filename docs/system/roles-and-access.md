@@ -152,6 +152,88 @@ Each role has a different lens into the system.
 
 ---
 
+## Internal vs External Contributors
+
+ERP Plus distinguishes between internal staff and community contributors.
+
+The two groups participate differently in the delivery process.
+
+---
+
+### Internal Staff
+
+Internal contributors have access to:
+
+- Taiga
+- GitHub repositories
+- CI/CD pipelines
+- Sprint planning
+
+Responsibilities:
+
+- execute User Stories
+- update Tasks
+- participate in sprint commitments
+- maintain delivery traceability
+
+Typical workflow:
+
+```txt
+User Story
+    ↓
+Task
+    ↓
+Branch
+    ↓
+Pull Request
+    ↓
+Merge
+```
+
+### Community Contributors
+
+Community contributors do not require access to Taiga.
+
+They contribute through GitHub.
+
+Responsibilities:
+
+- report bugs
+- submit Pull Requests
+- improve documentation
+- propose enhancements
+
+Typical workflow:
+
+```text
+GitHub Issue
+      ↓
+Branch
+      ↓
+Pull Request
+      ↓
+Maintainer Review
+```
+
+Maintainers decide whether external work should be represented in Taiga.
+
+---
+
+## Access Matrix
+
+| Capability             | Internal Staff | Community |
+| ---------------------- | -------------- | --------- |
+| View Documentation     | ✔              | ✔         |
+| Submit PRs             | ✔              | ✔         |
+| Create Branches        | ✔              | ✔         |
+| Access Taiga           | ✔              | ✘         |
+| Sprint Planning        | ✔              | ✘         |
+| Manage User Stories    | ✔              | ✘         |
+| Manage Tasks           | ✔              | ✘         |
+| Production Deployments | Restricted     | ✘         |
+
+---
+
 ## Documentation Visibility Rules
 
 Not all documentation is equal.
