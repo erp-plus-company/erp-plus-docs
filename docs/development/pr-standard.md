@@ -69,6 +69,62 @@ Deployment Notes
 
 ---
 
+## Taiga Traceability
+
+Internal Pull Requests must reference the related User Story.
+
+Examples:
+
+```txt
+TG-123
+TG-88
+TG-33
+```
+
+Branch example:
+
+```bash
+feature/TG-123-user-invitations
+```
+
+Commit example:
+
+```bash
+feat(accounts): add invitation workflow TG-123
+```
+
+---
+
+## Status Management
+
+ERP Plus currently uses manual state transitions inside Taiga.
+
+The expected operational flow is:
+
+```txt
+Task
+ ↓
+Implementation
+ ↓
+Pull Request
+ ↓
+Merge to develop
+ ↓
+Ready For Test
+ ↓
+Validation
+ ↓
+Merge to main
+ ↓
+Done
+```
+
+Neither commits nor Pull Requests automatically change Taiga states.
+
+Taiga remains the authoritative source for work tracking.
+
+---
+
 ## Validation Requirements
 
 Before requesting review:
