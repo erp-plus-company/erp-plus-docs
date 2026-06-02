@@ -35,12 +35,35 @@ Any change MUST respect:
 
 ### 2. Controlled Evolution
 
-Changes are introduced through:
+Changes are introduced through the official ERP Plus delivery workflow.
 
-- Pull Requests
-- CI validation
-- code review
-- ADR documentation (if needed)
+Every change must be traceable from planning to deployment.
+
+The platform uses:
+
+- Taiga for product management
+- GitHub for source control
+- GitHub Actions for CI/CD
+- ADRs for architectural decisions
+
+No feature should appear directly in source code without a corresponding planning artifact.
+
+Accepted planning artifacts:
+
+- Epic
+- User Story
+- Issue
+
+User Stories are the preferred implementation unit.
+
+Issues are used for:
+
+- bug reports
+- support requests
+- operational incidents
+- customer feedback
+
+Epics are optional and are used when multiple User Stories belong to a larger initiative.
 
 ---
 
@@ -69,8 +92,89 @@ Breaking changes are allowed ONLY if:
 
 Every meaningful system change follows:
 
-```bash
-Idea → ADR (optional) → Implementation → CI Validation → Review → Merge → Release
+```txt
+Idea
+↓
+Epic (optional)
+↓
+User Story
+↓
+Task
+↓
+Branch
+↓
+Pull Request
+↓
+Review
+↓
+Ready For Test
+↓
+develop
+↓
+main
+↓
+Release
+```
+
+---
+
+## Product Delivery Governance
+
+ERP Plus uses Taiga as the official product management platform.
+
+### Planning Hierarchy
+
+```txt
+Epic (optional)
+│
+└── User Story
+      │
+      └── Task
+```
+
+A User Story may exist without an Epic.
+
+Tasks represent implementation work items and are associated with a User Story.
+
+### Work Sources
+
+New work may originate from:
+
+- Product planning
+- Customer requests
+- Internal improvements
+- Technical debt
+- Taiga Issues
+
+### Sprint Governance
+
+ERP Plus uses fixed-length sprints.
+
+Current sprint duration:
+
+```txt
+2 weeks
+```
+
+Sprint planning determines:
+
+- User Stories
+- priorities
+- capacity allocation
+- release objectives
+
+### Source of Truth
+
+For implementation work:
+
+```txt
+Taiga is the source of truth.
+```
+
+For code:
+
+```txt
+GitHub is the source of truth.
 ```
 
 ---
@@ -84,6 +188,40 @@ MAJOR → breaking architectural or API changes
 MINOR → new features (backward compatible)
 PATCH → fixes and internal improvements
 ```
+
+---
+
+## Contributor Governance
+
+ERP Plus supports two contributor models.
+
+### Internal Contributors
+
+Internal contributors work directly from Taiga User Stories.
+
+Branch naming:
+
+```txt
+feature/TG-123-user-invitations
+bugfix/TG-456-fix-stock-calculation
+docs/TG-789-update-workflow
+```
+
+Every implementation branch must reference a Taiga User Story.
+
+### Community Contributors
+
+External contributors do not require access to Taiga.
+
+Branch naming:
+
+```txt
+feature/user-invitations
+bugfix/fix-stock-calculation
+docs/update-workflow
+```
+
+Community contributions enter the planning process only after maintainers review and accept them.
 
 ---
 
@@ -152,6 +290,58 @@ Context
 Decision
 Consequences
 ```
+
+---
+
+## Pull Request Governance
+
+Pull Requests are the primary validation mechanism between planning and delivery.
+
+### Internal Workflow
+
+```txt
+User Story
+↓
+Branch
+↓
+Pull Request
+↓
+Review
+↓
+develop
+```
+
+When a Pull Request is opened against:
+
+```txt
+develop
+```
+
+the corresponding User Story should be moved to:
+
+```txt
+Ready For Test
+```
+
+When changes reach:
+
+```txt
+main
+```
+
+the corresponding User Story may be moved to:
+
+```txt
+Done
+```
+
+according to the team's release policy.
+
+### Community Workflow
+
+Community contributors submit Pull Requests without Taiga integration.
+
+Maintainers are responsible for mapping accepted contributions into the planning process when necessary.
 
 ---
 
