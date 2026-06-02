@@ -4,210 +4,124 @@ This document defines the official development workflow used across ERP Plus.
 
 ERP Plus uses:
 
-- Taiga for product management
 - GitHub for source control
-- GitHub Actions for CI/CD
+- Taiga for project management
 - Pull Requests for code review
+- GitHub Actions for CI/CD
 
 ---
 
-## Workflow Types
+# Core Workflow
 
-ERP Plus supports two contribution models:
-
-| Contributor Type      | Taiga Access | GitHub Access |
-| --------------------- | ------------ | ------------- |
-| ERP Plus Staff        | Yes          | Yes           |
-| Community Contributor | No           | Yes           |
-
-Because of this, some workflow rules differ depending on contributor type.
-
----
-
-## ERP Plus Staff Workflow
-
-All internal development starts in Taiga.
-
-### Lifecycle
+Development work follows this lifecycle:
 
 ```txt
-Epic
- └── User Story
-        └── Task
-               └── Branch
-                      └── Pull Request
-                             └── Merge
-                                    └── Deploy
-```
-
----
-
-## Planning
-
-Work is organized using:
-
-- Epics
-- User Stories
-- Tasks
-- Issues
-- Sprints
-
-Sprint duration:
-
-```txt
-2 weeks
-```
-
-User Stories may:
-
-- belong to an Epic
-- exist independently
-
----
-
-## Branch Creation
-
-Branches are created from a Taiga Task.
-
-Branch format:
-
-```txt
-feature/TG-123-user-invitations
-fix/TG-456-worker-retry
-refactor/TG-789-engine-boundary
-docs/TG-111-update-workflow
-```
-
-Pattern:
-
-```txt
-<type>/TG-<task-id>-<description>
-```
-
----
-
-## Commit Convention
-
-ERP Plus uses Conventional Commits.
-
-Examples:
-
-```txt
-feat(users): add invitation workflow
-
-fix(workers): resolve retry issue
-
-docs(system): update architecture guide
-```
-
-When linked to Taiga:
-
-```txt
-feat(users): add invitation workflow TG-123
-```
-
-or
-
-```txt
-feat(users): add invitation workflow [TG-123]
-```
-
-The exact format depends on Taiga integration requirements.
-
----
-
-## Pull Request Flow
-
-```txt
+Epic (optional)
+ ↓
+User Story
+ ↓
 Task
-  ↓
+ ↓
 Branch
-  ↓
-Commit
-  ↓
+ ↓
+Implementation
+ ↓
 Pull Request
-  ↓
+ ↓
 Review
-  ↓
+ ↓
 Merge
 ```
 
-Every Pull Request must reference:
-
-- Taiga Task
-- User Story
-- Epic (if applicable)
-
 ---
 
-## Synchronization
+# Internal Contributor Workflow
 
-Taiga and GitHub are synchronized through webhooks.
+Internal contributors are members of ERP Plus and have access to both:
 
-The integration is expected to synchronize:
-
-- Branches
-- Commits
-- Pull Requests
-- Issues
-- Task status
-- User Story status
-- Epic progress
-
----
-
-## Community Contributor Workflow
-
-Community contributors do not require Taiga access.
+- GitHub
+- Taiga
 
 Workflow:
 
 ```txt
-Issue
-  ↓
-Fork
-  ↓
+Epic (optional)
+ ↓
+User Story
+ ↓
+Task
+ ↓
 Branch
-  ↓
+ ↓
+Implementation
+ ↓
 Pull Request
-  ↓
+ ↓
 Review
-  ↓
+ ↓
+Merge to develop
+ ↓
+Ready For Test
+ ↓
+Validation
+ ↓
+Merge to main
+ ↓
+Done
+```
+
+---
+
+# External Contributor Workflow
+
+Community contributors do not have access to Taiga.
+
+Workflow:
+
+```txt
+Fork
+ ↓
+Branch
+ ↓
+Implementation
+ ↓
+Pull Request
+ ↓
+Review
+ ↓
 Merge
 ```
 
 ---
 
-### Branch Naming
+# Branch Strategy
 
-Community branches use:
+## Main Branches
 
-```txt
-feature/user-invitations
+| Branch  | Purpose     |
+| ------- | ----------- |
+| main    | Production  |
+| develop | Integration |
 
-fix/login-validation
+---
 
-docs/update-installation-guide
+## Branch Naming
+
+### Internal Contributors
+
+Branches must reference the Taiga User Story.
+
+Examples:
+
+```bash
+feature/TG-123-user-invitations
+
+fix/TG-88-worker-retry
+
+docs/TG-33-localizacion-onboarding
 ```
 
-No Taiga identifier is required.
-
----
-
-### Pull Requests
-
-Community Pull Requests should:
-
-- explain the change
-- reference GitHub Issues when applicable
-- include tests when required
-- update documentation when necessary
-
----
-
-### Branch Types
-
-Official branch prefixes:
+Allowed prefixes:
 
 ```txt
 feature/
@@ -221,38 +135,104 @@ security/
 
 ---
 
-## Main Branches
+### External Contributors
 
-| Branch  | Purpose     |
-| ------- | ----------- |
-| main    | Production  |
-| develop | Integration |
+Community branches do not reference Taiga.
 
-Direct pushes to protected branches are prohibited.
+Examples:
+
+```bash
+feature/user-invitations
+
+fix/worker-retry
+
+docs/update-readme
+```
 
 ---
 
-## Merge Requirements
+# Commit Convention
 
-A Pull Request may only be merged when:
+ERP Plus uses Conventional Commits.
+
+Examples:
+
+```bash
+feat(accounts): add invitation workflow TG-123
+
+fix(workers): retry strategy TG-88
+
+docs(workflow): update development workflow TG-33
+```
+
+Optional traceability tags may be included:
+
+```bash
+feat(accounts): add invitation workflow TG-123 #in-progress
+```
+
+---
+
+## Important
+
+Tags such as:
+
+```txt
+#in-progress
+#ready-for-test
+#done
+```
+
+are currently informational.
+
+They provide traceability between GitHub and Taiga but do not automatically move Taiga objects between states.
+
+State transitions remain manually managed inside Taiga.
+
+---
+
+# Pull Requests
+
+All changes must go through Pull Requests.
+
+Direct pushes to protected branches are forbidden.
+
+---
+
+# Merge Rules
+
+A Pull Request can only be merged when:
 
 - CI passes
-- Tests pass
-- Security checks pass
-- Required reviews are approved
+- tests pass
+- security checks pass
+- review is approved
 
 ---
 
-## CI Validation
+# State Management
 
-CI validates:
+Taiga remains the source of truth for work status.
 
-- Rubocop
-- RSpec
-- Brakeman
-- Build integrity
+Current operational flow:
 
-A Pull Request with failing CI cannot be merged.
+```txt
+Task
+ ↓
+Implementation
+ ↓
+Pull Request
+ ↓
+Merge to develop
+ ↓
+Manual transition → Ready For Test
+ ↓
+Validation
+ ↓
+Merge to main
+ ↓
+Manual transition → Done
+```
 
 ---
 
@@ -265,31 +245,3 @@ A Pull Request with failing CI cannot be merged.
 → [Testing](../development/testing.md)
 
 → [Development Standards](../development/standards.md)
-
----
-
-## Summary
-
-ERP Plus development is governed by:
-
-```txt
-Taiga
-   ↓
-Epic
-   ↓
-User Story
-   ↓
-Task
-   ↓
-Branch
-   ↓
-Pull Request
-   ↓
-Review
-   ↓
-Merge
-   ↓
-Deploy
-```
-
-Community contributors follow a simplified GitHub-only workflow.

@@ -1,84 +1,108 @@
 # Feature Lifecycle (ERP Plus)
 
-This document defines the **end-to-end lifecycle of a feature** inside ERP Plus.
-
-It ensures that every change follows a predictable, scalable engineering flow.
+This document defines the complete lifecycle of a feature inside ERP Plus.
 
 ---
 
-## Core Principle
+# Core Principle
 
 A feature is not just code.
 
-It is:
-
-> a lifecycle that moves through engine boundaries, validation layers, and controlled deployment.
+It is a controlled lifecycle managed through Taiga, GitHub, CI, and deployment workflows.
 
 ---
 
-## Feature Lifecycle Flow
+# Feature Lifecycle
 
 ```txt
-Idea → Engine Selection → Branch → Implementation → Tests → PR → CI → Review → Merge → Deploy
+Epic (optional)
+ ↓
+User Story
+ ↓
+Task
+ ↓
+Branch
+ ↓
+Implementation
+ ↓
+Testing
+ ↓
+Pull Request
+ ↓
+Review
+ ↓
+Merge to develop
+ ↓
+Ready For Test
+ ↓
+Validation
+ ↓
+Merge to main
+ ↓
+Done
 ```
 
 ---
 
-## 1. Idea Phase
+# 1. Planning Phase
 
-Every feature starts with:
+Work may begin from:
 
-- a problem
-- a requirement
-- or an improvement
+- Epic
+- User Story
+- Issue
 
-It MUST be assigned to:
-
-- a specific engine
+User Stories may exist independently or belong to an Epic.
 
 ---
 
-## 2. Engine Selection
+# 2. User Story
 
-Each feature MUST belong to one primary engine:
+Every implementation must be associated with a User Story.
 
-| Feature Type       | Engine        |
-| ------------------ | ------------- |
-| Auth / Users       | erp_users     |
-| Accounts / Tenants | erp_accounts  |
-| Core logic         | erp_core      |
-| Background jobs    | erp_workers   |
-| Inventory          | erp_inventory |
+The User Story is the planning unit used by the team.
 
 ---
 
-## 3. Branch Creation
+# 3. Task
 
-Branch creation follows the official Development Workflow.
+Tasks are implementation units linked to a User Story.
 
-See:
-
-[Branch Creation](../development/workflow.md)
+Development work starts from a Task.
 
 ---
 
-## 4. Implementation Phase
+# 4. Branch Creation
+
+Internal contributors create branches referencing the User Story.
+
+Example:
+
+```bash
+feature/TG-123-user-invitations
+```
+
+---
+
+# 5. Implementation
 
 Rules:
 
 - respect engine boundaries
-- no cross-engine internal coupling
-- use services instead of direct access
+- preserve multi-tenancy
+- avoid hidden dependencies
 - follow Rails conventions
 
 ---
 
-## 5. Testing Phase
+# 6. Testing
 
-Every feature MUST include:
+Every feature must include appropriate tests.
 
-- unit tests (domain logic)
-- feature tests (user flow)
+Examples:
+
+- unit tests
+- feature tests
 - engine-specific tests
 
 ```bash
@@ -87,35 +111,30 @@ bundle exec rspec
 
 ---
 
-## 6. Pull Request Phase
+# 7. Pull Request
 
-PR MUST:
+Every feature must be submitted through a Pull Request.
 
-- follow PR Standard
-- declare engine scope
-- include tests
-- pass CI checks
+The Pull Request becomes the review unit.
 
 ---
 
-## 7. CI Phase
+# 8. CI Validation
 
 CI validates:
 
-- Rubocop
 - RSpec
+- Rubocop
 - Brakeman
-- build integrity
+- Build integrity
 
-If CI fails:
-
-> feature is not valid
+A feature cannot advance if CI fails.
 
 ---
 
-## 8. Review Phase
+# 9. Review
 
-Review checks:
+Review verifies:
 
 - architecture compliance
 - engine isolation
@@ -124,60 +143,96 @@ Review checks:
 
 ---
 
-## 9. Merge Phase
+# 10. Merge to Develop
 
 Once approved:
 
-- merged into develop
-- later released via main
+```txt
+Feature Branch
+ ↓
+develop
+```
+
+At this point the User Story becomes:
+
+```txt
+Ready For Test
+```
+
+The transition is currently managed manually inside Taiga.
 
 ---
 
-## 10. Deploy Phase
+# 11. Validation
 
-Deployment flow:
+Functional validation occurs against develop.
 
-```bash
-Merge → CI → Docker Build → Kamal Deploy → Production
+The objective is to verify:
+
+- acceptance criteria
+- integrations
+- regressions
+
+---
+
+# 12. Merge to Main
+
+Validated changes are merged into:
+
+```txt
+main
 ```
 
 ---
 
-## Rules Summary
+# 13. Completion
 
-- every feature belongs to one engine
-- no feature bypasses CI
-- no feature ignores multi-tenancy
-- no feature bypasses PR flow
+After production approval:
 
----
-
-## Feature Lifecycle Mental Model
-
-```bash
-Idea → Engine → Branch → Code → Tests → PR → CI → Review → Merge → Deploy
+```txt
+Done
 ```
 
----
-
-## Why this matters
-
-Without this lifecycle:
-
-- features become inconsistent
-- engines become coupled
-- CI loses meaning
-- system becomes unpredictable
-
-With this lifecycle:
-
-- ✔ predictable development
-- ✔ scalable architecture
-- ✔ safe contributions
-- ✔ enterprise-ready workflow
+is set manually in Taiga.
 
 ---
 
-## Final Definition
+# Sprint Model
 
-> A feature in ERP Plus is a controlled lifecycle unit inside a bounded engine, validated by CI and governed by architecture rules.
+ERP Plus uses two-week sprints.
+
+Planning occurs at the User Story level.
+
+Execution occurs at the Task level.
+
+---
+
+# Summary
+
+```txt
+Epic (optional)
+ ↓
+User Story
+ ↓
+Task
+ ↓
+Branch
+ ↓
+Code
+ ↓
+Tests
+ ↓
+PR
+ ↓
+CI
+ ↓
+Review
+ ↓
+develop
+ ↓
+Ready For Test
+ ↓
+main
+ ↓
+Done
+```
