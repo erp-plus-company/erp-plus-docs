@@ -11,7 +11,7 @@ ERP Plus uses:
 
 ---
 
-# Core Workflow
+## Core Workflow
 
 Development work follows this lifecycle:
 
@@ -35,7 +35,7 @@ Merge
 
 ---
 
-# Internal Contributor Workflow
+## Internal Contributor Workflow
 
 Internal contributors are members of ERP Plus and have access to both:
 
@@ -72,7 +72,7 @@ Done
 
 ---
 
-# External Contributor Workflow
+## External Contributor Workflow
 
 Community contributors do not have access to Taiga.
 
@@ -94,9 +94,9 @@ Merge
 
 ---
 
-# Branch Strategy
+## Branch Strategy
 
-## Main Branches
+### Main Branches
 
 | Branch  | Purpose     |
 | ------- | ----------- |
@@ -105,9 +105,9 @@ Merge
 
 ---
 
-## Branch Naming
+### Branch Naming
 
-### Internal Contributors
+#### Internal Contributors
 
 Branches must reference the Taiga User Story.
 
@@ -135,7 +135,7 @@ security/
 
 ---
 
-### External Contributors
+#### External Contributors
 
 Community branches do not reference Taiga.
 
@@ -151,7 +151,7 @@ docs/update-readme
 
 ---
 
-# Commit Convention
+## Commit Convention
 
 ERP Plus uses Conventional Commits.
 
@@ -173,7 +173,7 @@ feat(accounts): add invitation workflow TG-123 #in-progress
 
 ---
 
-## Important
+### Important
 
 Tags such as:
 
@@ -191,7 +191,7 @@ State transitions remain manually managed inside Taiga.
 
 ---
 
-# Pull Requests
+## Pull Requests
 
 All changes must go through Pull Requests.
 
@@ -199,7 +199,7 @@ Direct pushes to protected branches are forbidden.
 
 ---
 
-# Merge Rules
+## Merge Rules
 
 A Pull Request can only be merged when:
 
@@ -210,7 +210,7 @@ A Pull Request can only be merged when:
 
 ---
 
-# State Management
+## State Management
 
 Taiga remains the source of truth for work status.
 

@@ -4,7 +4,7 @@ This document defines the complete lifecycle of a feature inside ERP Plus.
 
 ---
 
-# Core Principle
+## Core Principle
 
 A feature is not just code.
 
@@ -12,7 +12,7 @@ It is a controlled lifecycle managed through Taiga, GitHub, CI, and deployment w
 
 ---
 
-# Feature Lifecycle
+## Feature Lifecycle
 
 ```txt
 Epic (optional)
@@ -44,7 +44,7 @@ Done
 
 ---
 
-# 1. Planning Phase
+## 1. Planning Phase
 
 Work may begin from:
 
@@ -56,7 +56,7 @@ User Stories may exist independently or belong to an Epic.
 
 ---
 
-# 2. User Story
+## 2. User Story
 
 Every implementation must be associated with a User Story.
 
@@ -64,7 +64,7 @@ The User Story is the planning unit used by the team.
 
 ---
 
-# 3. Task
+## 3. Task
 
 Tasks are implementation units linked to a User Story.
 
@@ -72,7 +72,7 @@ Development work starts from a Task.
 
 ---
 
-# 4. Branch Creation
+## 4. Branch Creation
 
 Internal contributors create branches referencing the User Story.
 
@@ -84,7 +84,7 @@ feature/TG-123-user-invitations
 
 ---
 
-# 5. Implementation
+## 5. Implementation
 
 Rules:
 
@@ -95,7 +95,7 @@ Rules:
 
 ---
 
-# 6. Testing
+## 6. Testing
 
 Every feature must include appropriate tests.
 
@@ -111,7 +111,7 @@ bundle exec rspec
 
 ---
 
-# 7. Pull Request
+## 7. Pull Request
 
 Every feature must be submitted through a Pull Request.
 
@@ -119,7 +119,7 @@ The Pull Request becomes the review unit.
 
 ---
 
-# 8. CI Validation
+## 8. CI Validation
 
 CI validates:
 
@@ -132,7 +132,7 @@ A feature cannot advance if CI fails.
 
 ---
 
-# 9. Review
+## 9. Review
 
 Review verifies:
 
@@ -143,7 +143,7 @@ Review verifies:
 
 ---
 
-# 10. Merge to Develop
+## 10. Merge to Develop
 
 Once approved:
 
@@ -163,7 +163,7 @@ The transition is currently managed manually inside Taiga.
 
 ---
 
-# 11. Validation
+## 11. Validation
 
 Functional validation occurs against develop.
 
@@ -175,7 +175,7 @@ The objective is to verify:
 
 ---
 
-# 12. Merge to Main
+## 12. Merge to Main
 
 Validated changes are merged into:
 
@@ -185,7 +185,7 @@ main
 
 ---
 
-# 13. Completion
+## 13. Completion
 
 After production approval:
 
@@ -197,7 +197,7 @@ is set manually in Taiga.
 
 ---
 
-# Sprint Model
+## Sprint Model
 
 ERP Plus uses two-week sprints.
 
@@ -207,7 +207,7 @@ Execution occurs at the Task level.
 
 ---
 
-# Summary
+## Summary
 
 ```txt
 Epic (optional)
