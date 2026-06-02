@@ -22,6 +22,69 @@ Each engine is:
 
 ---
 
+## Delivery Model
+
+ERP Plus separates planning, implementation, and deployment into specialized platforms.
+
+### Planning Layer
+
+Planning is managed in Taiga.
+
+Taiga contains:
+
+- Epics
+- User Stories
+- Tasks
+- Issues
+- Sprints
+
+### Implementation Layer
+
+Implementation is managed in GitHub.
+
+GitHub contains:
+
+- branches
+- commits
+- pull requests
+- releases
+
+### Deployment Layer
+
+Deployment is managed through:
+
+- GitHub Actions
+- Docker
+- Kamal
+
+---
+
+## End-to-End Flow
+
+Every feature follows:
+
+```txt
+Epic (optional)
+      ↓
+User Story
+      ↓
+Task
+      ↓
+Branch
+      ↓
+Pull Request
+      ↓
+Review
+      ↓
+Merge
+      ↓
+Deploy
+```
+
+This workflow guarantees traceability from planning through production.
+
+---
+
 ### 2. Engine Isolation
 
 Engines must NOT:

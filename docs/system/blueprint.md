@@ -26,6 +26,67 @@ ERP Plus IS:
 
 ---
 
+## Delivery Blueprint
+
+ERP Plus operates through three coordinated systems:
+
+```txt
+Planning
+    ↓
+Implementation
+    ↓
+Deployment
+```
+
+### Planning System
+
+Managed in Taiga.
+
+Contains:
+
+- Epics
+- User Stories
+- Tasks
+- Issues
+- Sprint planning
+
+### Implementation System
+
+Managed in GitHub.
+
+Contains:
+
+- repositories
+- branches
+- commits
+- pull requests
+
+### Deployment System
+
+Managed through:
+
+- GitHub Actions
+- Docker
+- Kamal
+
+---
+
+## Delivery Architecture
+
+```txt
+Taiga
+  ↓
+GitHub
+  ↓
+CI/CD
+  ↓
+Production
+```
+
+This delivery architecture is part of the ERP Plus system blueprint.
+
+---
+
 ## Global Architecture Map
 
 ```bash
