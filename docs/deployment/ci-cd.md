@@ -266,70 +266,13 @@ Characteristics:
 
 ---
 
-## Sprint Integration
+## Product Integration
 
-ERP Plus uses:
+CI/CD validates work that has already been planned and approved through the ERP Plus product workflow.
 
-```txt
-2-week sprints
-```
+See:
 
-managed in Taiga.
-
-During a sprint:
-
-- User Stories are planned
-- Tasks are assigned
-- GitHub work is linked back to Taiga items
-
----
-
-## Issues Workflow
-
-External feedback is managed through Taiga Issues.
-
-Examples:
-
-- bug reports
-- feature requests
-- client feedback
-- operational incidents
-
-Issues may generate:
-
-```txt
-Issue
-   ↓
-User Story
-   ↓
-Task
-   ↓
-Implementation
-```
-
----
-
-## Definition of Ready
-
-Before implementation:
-
-- User Story exists
-- scope is clear
-- engine ownership is defined
-- acceptance criteria are defined
-
----
-
-## Definition of Done
-
-A change is considered complete only when:
-
-- implementation finished
-- tests added or updated
-- CI passes
-- review approved
-- merged into main
-- User Story moved to Done
+→ [Product & Delivery Management](../product/index.md)
 
 ---
 

@@ -236,15 +236,11 @@ Security is enforced at multiple layers:
 
 ---
 
-## Infrastructure Model
+## Infrastructure Layer
 
-ERP Plus runs on:
+ERP Plus runs on a managed infrastructure platform documented in the Operations section.
 
-- Docker (local + production)
-- Kamal (deployment)
-- GitHub Actions (CI/CD)
-- PostgreSQL (data)
-- Solid Stack (jobs, cache, real-time)
+The blueprint focuses on logical architecture rather than deployment implementation details.
 
 ---
 

@@ -100,7 +100,13 @@ nav:
       - Standards: development/standards.md
       - Testing: development/testing.md
       - PR Standards: development/pr-standard.md
-      - Feature Lifecycle: development/feature-lifecycle.md
+
+  - Product & Delivery Management:
+      - Overview: product/index.md
+      - Taiga Workflow: product/taiga-workflow.md
+      - Sprint Process: product/sprint-process.md
+      - Issue Management: product/issue-management.md
+      - Release Management: product/release-management.md
 
   - Operations:
       - CI/CD: deployment/ci-cd.md

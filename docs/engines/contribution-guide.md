@@ -270,6 +270,4 @@ Development Process:
 
 → [Workflow](../development/workflow.md)
 
-→ [Feature lifecycle](../development/feature-lifecycle.md)
-
 → [PR Standard](../development/pr-standard.md)

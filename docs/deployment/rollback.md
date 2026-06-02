@@ -333,5 +333,3 @@ Improve
 → [Environments](../deployment/environments.md)
 
 → [Governance & Evolution](../system/governance-and-evolution.md)
-
-→ [Feature Lifecycle](../development/feature-lifecycle.md)

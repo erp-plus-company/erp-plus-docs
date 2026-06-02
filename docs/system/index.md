@@ -214,17 +214,9 @@ ERP Plus assumes these system actors:
 
 ---
 
-## Deployment Model
+## Operations
 
-ERP Plus uses:
-
-- GitHub Actions CI/CD
-- Docker containers
-- Kamal deployment system
-
-Flow:
-
-`Code → PR → CI (test + security) → Merge → Deploy via Kamal`
+Deployment, environments, rollback procedures, and CI/CD are documented in the Operations section.
 
 ---
 

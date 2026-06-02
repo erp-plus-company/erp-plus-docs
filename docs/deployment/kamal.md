@@ -240,8 +240,6 @@ Together they provide complete traceability from requirement to production deplo
 
 → [Development Workflow](../development/workflow.md)
 
-→ [Feature Lifecycle](../development/feature-lifecycle.md)
-
 → [CI/CD Pipeline](../deployment/ci-cd.md)
 
 → [Environments](../deployment/environments.md)

@@ -11,30 +11,6 @@ ERP Plus uses:
 
 ---
 
-## Core Workflow
-
-Development work follows this lifecycle:
-
-```txt
-Epic (optional)
- ↓
-User Story
- ↓
-Task
- ↓
-Branch
- ↓
-Implementation
- ↓
-Pull Request
- ↓
-Review
- ↓
-Merge
-```
-
----
-
 ## Internal Contributor Workflow
 
 Internal contributors are members of ERP Plus and have access to both:
@@ -210,35 +186,15 @@ A Pull Request can only be merged when:
 
 ---
 
-## State Management
+## Related Product Workflow
 
-Taiga remains the source of truth for work status.
+Planning, sprint execution, task management, and release progression are documented in:
 
-Current operational flow:
-
-```txt
-Task
- ↓
-Implementation
- ↓
-Pull Request
- ↓
-Merge to develop
- ↓
-Manual transition → Ready For Test
- ↓
-Validation
- ↓
-Merge to main
- ↓
-Manual transition → Done
-```
+→ [Product & Delivery Management](../product/index.md)
 
 ---
 
 ## Related Documents
-
-→ [Feature Lifecycle](../development/feature-lifecycle.md)
 
 → [Pull Request Standards](../development/pr-standard.md)
 
