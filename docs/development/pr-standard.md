@@ -1,227 +1,342 @@
 # Pull Request Standard (ERP Plus)
 
-This document defines the **official Pull Request contract** for ERP Plus.
+This document defines the official Pull Request contract for ERP Plus.
 
-Every contributor MUST follow this standard to ensure consistency, safety, and scalability across all engines.
+Every Pull Request must preserve:
+
+- architectural boundaries
+- multi-tenancy rules
+- engine ownership
+- traceability with Taiga
 
 ---
 
 ## Core Principle
 
-A Pull Request is not just a code change.
+A Pull Request is not merely a code change.
 
 It is:
 
-> a controlled modification inside a bounded engine that must respect architecture, multi-tenancy, and system governance.
+> the implementation artifact of a User Story tracked in Taiga and validated through review, testing, and CI.
 
 ---
 
-## PR Scope Rules
+## Relationship with Taiga
 
-### Allowed scope
+Every Pull Request MUST be associated with:
 
-A PR MUST belong to:
-
-- a single engine (preferred)
-- or a clearly defined cross-engine change (exception only)
-
----
-
-### Forbidden scope
-
-A PR must NOT:
-
-- modify multiple engines without justification
-- mix infrastructure + business logic randomly
-- bypass engine boundaries
-- introduce hidden dependencies
-
----
-
-## PR Size Rule
-
-PRs MUST be:
-
-- small
-- focused
-- reviewable in < 30 minutes
-
-If a PR is too large:
-
-> split it before review
-
----
-
-## PR Structure (Required)
-
-Every PR MUST include:
-
-```txt
-Summary
-Type of Change
-Related Engine(s)
-Changes Introduced
-Tests Added/Updated
-Migration Notes (if any)
-Breaking Changes (if any)
-Deployment Notes
-```
-
----
-
-## Taiga Traceability
-
-Internal Pull Requests must reference the related User Story.
+- a User Story (preferred)
+- or an Issue (bug, support request, operational task)
 
 Examples:
 
 ```txt
-TG-123
-TG-88
-TG-33
+TG-123 User Invitations
+TG-245 Inventory Adjustment Workflow
+TG-387 Customer Reported Bug
 ```
 
-Branch example:
+---
+
+## Traceability Requirements
+
+Every Pull Request MUST provide traceability between:
+
+```txt
+Taiga
+↓
+Branch
+↓
+Commits
+↓
+Pull Request
+↓
+Merge
+```
+
+A reviewer must be able to identify:
+
+- why the change exists
+- which User Story requested it
+- which engine is affected
+
+---
+
+## Branch Naming
+
+### Internal Contributors
+
+Branches created from Taiga work items:
 
 ```bash
 feature/TG-123-user-invitations
+
+bugfix/TG-245-stock-calculation
+
+docs/TG-33-localizacion-onboarding
 ```
 
-Commit example:
-
-```bash
-feat(accounts): add invitation workflow TG-123
-```
-
----
-
-## Status Management
-
-ERP Plus currently uses manual state transitions inside Taiga.
-
-The expected operational flow is:
+Allowed prefixes:
 
 ```txt
-Task
- ↓
-Implementation
- ↓
-Pull Request
- ↓
-Merge to develop
- ↓
-Ready For Test
- ↓
-Validation
- ↓
-Merge to main
- ↓
-Done
+feature/
+bugfix/
+hotfix/
+refactor/
+docs/
+chore/
+ci/
+security/
 ```
-
-Neither commits nor Pull Requests automatically change Taiga states.
-
-Taiga remains the authoritative source for work tracking.
 
 ---
 
-## Validation Requirements
+### Community Contributors
 
-Before requesting review:
+External contributors do not have access to Taiga.
 
-### The PR MUST:
+Branches should follow:
 
-- pass CI pipeline
-- pass RSpec tests
-- pass Rubocop
-- pass Brakeman security scan
-- respect engine isolation rules
+```bash
+feature/user-invitations
+
+fix/stock-calculation
+
+docs/improve-installation-guide
+```
+
+---
+
+## Pull Request Scope
+
+Preferred scope:
+
+- one User Story
+- one engine
+- one objective
+
+---
+
+## Allowed Scope
+
+A Pull Request MAY:
+
+- modify a single engine
+- update documentation
+- introduce infrastructure improvements
+- fix a bug
+
+---
+
+## Discouraged Scope
+
+Avoid:
+
+- mixing unrelated User Stories
+- combining infrastructure and business features
+- modifying multiple engines without justification
+
+---
+
+## Pull Request Structure
+
+Every Pull Request MUST contain:
+
+```txt
+Summary
+
+Related Work Item
+
+Affected Engine(s)
+
+Changes Introduced
+
+Testing Performed
+
+Documentation Updated
+
+Deployment Notes
+
+Breaking Changes (if any)
+```
+
+---
+
+## Related Work Item
+
+Examples:
+
+```txt
+Taiga User Story: TG-123
+
+Taiga Issue: TG-387
+```
+
+Community contributions may use:
+
+```txt
+N/A (Community Contribution)
+```
 
 ---
 
 ## Testing Requirements
 
-- feature changes → feature specs required
-- domain logic → unit tests required
-- engine changes → engine-specific tests required
+Every Pull Request MUST include appropriate testing.
+
+Examples:
+
+| Change Type   | Required Validation |
+| ------------- | ------------------- |
+| Domain Logic  | Unit Tests          |
+| User Workflow | Feature Specs       |
+| Engine Change | Engine Test Suite   |
+| Documentation | Manual Validation   |
 
 ---
 
-## Engine Awareness Rule
+## CI Requirements
 
-Every PR MUST clearly declare:
+The Pull Request MUST pass:
 
-- which engine(s) are affected
-- whether core system is impacted
-- whether multi-tenancy is affected
+- RSpec
+- Rubocop
+- Brakeman
+- CI pipeline
 
----
-
-## Cross-Engine Rules
-
-Cross-engine changes are allowed ONLY if:
-
-- interaction is through public services
-- no internal engine logic is accessed directly
-- contracts are explicitly defined
-
----
-
-## Commit Traceability
-
-Every PR SHOULD map cleanly to:
-
-- commits
-- feature branch
-- engine scope
+A failing pipeline blocks merge.
 
 ---
 
 ## Review Requirements
 
-A PR is NOT valid until:
+Standard Changes:
 
-- at least 1 approval (2 for core changes)
-- CI is green
-- no security issues detected
+- 1 approval required
+
+Core Architecture Changes:
+
+- 2 approvals recommended
+
+Review verifies:
+
+- engine isolation
+- architecture compliance
+- multi-tenancy safety
+- testing quality
+- documentation impact
 
 ---
 
-## Merge Rules
+## State Progression
 
-Only maintainers can merge into:
+Taiga task state changes are performed manually.
 
-- develop
-- main
+Typical flow:
 
-All merges MUST:
+```txt
+Task Created
+↓
+In Progress
+↓
+Ready For Review
+↓
+Pull Request Opened
+↓
+Ready For Test
+↓
+Done
+```
 
-- preserve engine boundaries
-- not break multi-tenancy
-- not degrade CI health
+---
+
+## Merge Policy
+
+### Feature Branch → Develop
+
+When a Pull Request is merged into:
+
+```txt
+develop
+```
+
+the associated User Story should move to:
+
+```txt
+Ready For Test
+```
+
+after validation by the responsible reviewer.
+
+---
+
+### Develop → Main
+
+When the feature reaches production through:
+
+```txt
+main
+```
+
+the associated User Story should move to:
+
+```txt
+Done
+```
+
+---
+
+## Community Contributions
+
+External contributors:
+
+- do not require Taiga access
+- use GitHub Issues and Pull Requests
+- follow the same architecture and testing rules
+
+Maintainers are responsible for linking accepted contributions to internal planning if necessary.
 
 ---
 
 ## Definition of Done
 
-A PR is DONE when:
+A Pull Request is considered complete when:
 
-- feature works
-- tests exist
+- implementation is finished
+- tests pass
 - CI passes
-- documentation updated (if needed)
-- no architecture rules violated
+- review is approved
+- documentation is updated when required
+- architecture rules remain intact
 
 ---
 
 ## Mental Model
 
-```bash
-Feature → Engine → PR → CI → Review → Merge → Deploy
+```txt
+User Story
+↓
+Branch
+↓
+Commits
+↓
+Pull Request
+↓
+Review
+↓
+Testing
+↓
+Merge Develop
+↓
+Ready For Test
+↓
+Merge Main
+↓
+Done
 ```
 
 ---
 
-## Summary
+## Final Definition
 
-> A PR in ERP Plus is a controlled architectural unit, not just a code change.
+> A Pull Request in ERP Plus is a controlled implementation unit linked to a work item, validated through architecture review, testing, and CI before becoming part of the platform.

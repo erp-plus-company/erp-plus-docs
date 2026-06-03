@@ -11,7 +11,7 @@ theme:
   name: material
 
   logo: assets/images/logo_img.jpg
-  favicon: assets/images/logo.jpg
+  favicon: assets/images/logo_img.jpg
 
   font:
     text: Inter
@@ -100,18 +100,33 @@ nav:
       - Standards: development/standards.md
       - Testing: development/testing.md
       - PR Standards: development/pr-standard.md
-      - Feature Lifecycle: development/feature-lifecycle.md
+      - Documentation Contributions: development/documentation-contribution.md
+
+  - Product & Delivery Management:
+      - Overview: product/index.md
+      - Taiga Workflow: product/taiga-workflow.md
+      - Sprint Process: product/sprint-process.md
+      - Issue Management: product/issue-management.md
+      - Release Management: product/release-management.md
 
   - Operations:
       - CI/CD: deployment/ci-cd.md
       - Environments: deployment/environments.md
       - Kamal: deployment/kamal.md
       - Rollback: deployment/rollback.md
+
+  - Security:
       - Security Policies: security/policies.md
       - Secrets Management: security/secrets.md
       - Vulnerability Handling: security/vulnerabilities.md
 
+  - Releases:
+      - Overview: releases/index.md
+      - Release Process: releases/release-process.md
+
   - Decisions:
+      - Overview: decisions/index.md
+      - ADR Template: decisions/adr-template.md
       - ADR 0001 Modular Monolith: decisions/adr-0001-modular-monolith.md
       - ADR 0002 Kamal: decisions/adr-0002-kamal.md
       - ADR 0003 Engines: decisions/adr-0003-engines.md

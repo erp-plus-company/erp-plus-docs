@@ -2,32 +2,173 @@
 
 Official documentation repository for ERP Plus.
 
-ERP Plus is a modular ERP platform built using a Modular Monolith architecture with Rails Engines, designed to support multi-account business management at scale.
+This repository is the authoritative source of truth for platform architecture, engineering workflows, governance, operational procedures, and architectural decisions.
 
 ---
 
 ## Purpose
 
-This repository is the single source of truth for ERP Plus documentation.
+ERP Plus Documentation exists to document:
 
-It contains:
+- platform architecture
+- system behavior
+- engineering standards
+- development workflows
+- operational practices
+- security policies
+- architecture decision records (ADRs)
 
-- Architecture documentation
-- Governance and organizational decisions
-- System design
-- Engine documentation
-- Development workflows
-- Operational guides
-- Security documentation
-- Architecture Decision Records (ADRs)
+This repository documents the platform.
+
+It does not contain application code.
+
+---
+
+# ERP Plus Platform
+
+ERP Plus is a modular ERP platform built with Rails 8.
+
+The platform follows a Modular Monolith architecture based on Rails Engines.
+
+```txt
+ERP Plus
+│
+├── erp_core
+├── erp_accounts
+├── erp_users
+├── erp_workers
+└── erp_inventory
+```
+
+---
+
+# Documentation Philosophy
+
+Documentation is treated as a first-class engineering artifact.
+
+ERP Plus follows a:
+
+```txt
+Documentation First
+```
+
+approach.
+
+Architecture, workflows, and decisions must be documented before becoming organizational standards.
 
 ---
 
 ## Documentation Website
 
-The published documentation is available at:
+Published documentation:
 
+```txt
 https://erp-plus-company.github.io/erp-plus-docs/
+```
+
+---
+
+# Documentation Scope
+
+This repository contains:
+
+- Architecture documentation
+- Development workflows
+- Platform governance
+- Security documentation
+- Operational procedures
+- ADRs
+- Engine documentation
+
+---
+
+# Engineering Workflow
+
+ERP Plus development is managed through:
+
+- Taiga
+- GitHub
+- GitHub Actions
+
+The official workflow is:
+
+```txt
+Epic (optional)
+ ↓
+User Story
+ ↓
+Task
+ ↓
+Branch
+ ↓
+Pull Request
+ ↓
+Review
+ ↓
+Merge
+ ↓
+Release
+```
+
+---
+
+# Taiga Integration
+
+ERP Plus uses Taiga as the primary project management platform.
+
+Work is organized through:
+
+- Epics
+- User Stories
+- Tasks
+- Issues
+- Sprints
+
+Current sprint duration:
+
+```txt
+2 weeks
+```
+
+---
+
+# Contributor Models
+
+ERP Plus supports two contributor models.
+
+## Internal Contributors
+
+Internal contributors work through:
+
+```txt
+Taiga
+ ↓
+User Story
+ ↓
+Branch
+ ↓
+Pull Request
+```
+
+Branch example:
+
+```bash
+feature/TG-123-user-invitations
+```
+
+---
+
+## Community Contributors
+
+Community contributors do not require Taiga access.
+
+Branch example:
+
+```bash
+feature/user-invitations
+```
+
+Community contributions are submitted through Pull Requests.
 
 ---
 
@@ -42,56 +183,59 @@ docs/
 ├── engines/
 ├── getting-started/
 ├── development/
-├── deployment/
-├── security/
+├── operations/
 └── decisions/
 ```
 
 ### Organization
 
-Explains:
+Defines:
 
-- GitHub organization structure
-- Repository responsibilities
-- Ownership model
-- Visibility model
+- repository ownership
+- governance model
+- visibility rules
+- organizational structure
 
 ### System
 
-Explains:
+Defines:
 
-- Platform blueprint
-- Data flow
-- Engine contracts
-- Governance model
-- Operational model
+- platform behavior
+- engine contracts
+- data flow
+- operational model
 
 ### Architecture
 
-Explains:
+Defines:
 
-- Modular Monolith design
-- Engine architecture
-- Multi-tenancy model
+- modular monolith architecture
+- engine boundaries
+- multi-tenancy
 
 ### Engines
 
-Engine-specific documentation:
+Engine-specific documentation.
 
-- erp_core
-- erp_accounts
-- erp_users
-- erp_workers
-- erp_inventory
+Examples:
+
+```txt
+erp_core
+erp_accounts
+erp_users
+erp_workers
+erp_inventory
+```
 
 ### Development
 
-Engineering workflows:
+Defines:
 
-- Git workflow
-- Pull Requests
-- Testing
-- Coding standards
+- workflows
+- feature lifecycle
+- pull request standards
+- coding standards
+- testing requirements
 
 ### Operations
 
@@ -155,38 +299,35 @@ site/
 
 ---
 
-## Contributing
+# Documentation Governance
 
-Documentation changes should:
+Documentation must be updated whenever:
 
-- preserve architectural consistency
-- follow existing terminology
-- avoid duplicating content
-- update related sections when necessary
+- architecture changes
+- workflows change
+- engineering standards change
+- deployment processes change
 
-When introducing significant architectural changes:
-
-- update documentation
-- update ADRs when applicable
+Documentation is considered part of the Definition of Done.
 
 ---
 
-## ERP Plus Platform
+## Contributing
 
-This repository documents the ERP Plus platform.
+Before contributing:
 
-The platform itself is composed of:
+Read:
 
-```text
-erp_plus
-├── erp_core
-├── erp_accounts
-├── erp_users
-├── erp_workers
-└── erp_inventory
+```txt
+CONTRIBUTING.md
 ```
 
-The documentation repository is responsible for documenting the platform, not implementing it.
+Documentation changes should:
+
+- avoid duplication
+- preserve terminology
+- remain architecture-driven
+- stay consistent with ADRs
 
 ---
 

@@ -1,5 +1,7 @@
 # ERP Plus Documentation
 
+Documentation Version: v1.0.0
+
 Welcome to the official ERP Plus documentation.
 
 ERP Plus is a modular ERP platform built as a Rails modular monolith using Engines.
@@ -50,16 +52,19 @@ This documentation is the central source of truth for:
 
 ## Documentation Sections
 
-| Section          | Purpose                                     |
-| ---------------- | ------------------------------------------- |
-| Organization     | GitHub organization and platform structure  |
-| System Blueprint | How ERP Plus works as a system              |
-| Architecture     | Architectural concepts and design           |
-| Engines          | Domain modules and responsibilities         |
-| Development      | Development workflow and contribution rules |
-| Deployment       | CI/CD and operational deployment            |
-| Security         | Security policies and practices             |
-| Decisions        | Architecture Decision Records (ADRs)        |
+| Section                       | Purpose                         |
+| ----------------------------- | ------------------------------- |
+| Organization                  | Governance and repositories     |
+| System                        | Platform overview               |
+| Architecture                  | Design and engineering concepts |
+| Engines                       | Business domains                |
+| Getting Started               | Onboarding                      |
+| Development                   | Engineering practices           |
+| Product & Delivery Management | Planning and execution          |
+| Operations                    | Deployment and operations       |
+| Security                      | Security standards              |
+| Decisions                     | ADRs                            |
+| Releases                      | Releases                        |
 
 ---
 
