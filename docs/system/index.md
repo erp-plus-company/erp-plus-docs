@@ -22,6 +22,69 @@ Each engine is:
 
 ---
 
+## Delivery Model
+
+ERP Plus separates planning, implementation, and deployment into specialized platforms.
+
+### Planning Layer
+
+Planning is managed in Taiga.
+
+Taiga contains:
+
+- Epics
+- User Stories
+- Tasks
+- Issues
+- Sprints
+
+### Implementation Layer
+
+Implementation is managed in GitHub.
+
+GitHub contains:
+
+- branches
+- commits
+- pull requests
+- releases
+
+### Deployment Layer
+
+Deployment is managed through:
+
+- GitHub Actions
+- Docker
+- Kamal
+
+---
+
+## End-to-End Flow
+
+Every feature follows:
+
+```txt
+Epic (optional)
+      ↓
+User Story
+      ↓
+Task
+      ↓
+Branch
+      ↓
+Pull Request
+      ↓
+Review
+      ↓
+Merge
+      ↓
+Deploy
+```
+
+This workflow guarantees traceability from planning through production.
+
+---
+
 ### 2. Engine Isolation
 
 Engines must NOT:
@@ -151,17 +214,9 @@ ERP Plus assumes these system actors:
 
 ---
 
-## Deployment Model
+## Operations
 
-ERP Plus uses:
-
-- GitHub Actions CI/CD
-- Docker containers
-- Kamal deployment system
-
-Flow:
-
-`Code → PR → CI (test + security) → Merge → Deploy via Kamal`
+Deployment, environments, rollback procedures, and CI/CD are documented in the Operations section.
 
 ---
 
@@ -216,3 +271,19 @@ This file becomes:
 - ✔ system design reference
 - ✔ scaling guide
 - ✔ decision baseline
+
+---
+
+## Related Documents
+
+→ [System Blueprint](../system/blueprint.md)
+
+→ [Data Flow](../system/data-flow.md)
+
+→ [Engine Contracts](../system/engine-contracts.md)
+
+→ [Roles and Access](../system/roles-and-access.md)
+
+→ [Governance and Evolution](../system/governance-and-evolution.md)
+
+→ [Observability and Operational Model](../system/observability-and-operational-model.md)

@@ -30,6 +30,68 @@ This section is intended for:
 
 ---
 
+## Before Your First Contribution
+
+ERP Plus uses two different workflows depending on the contributor type.
+
+### Internal Contributors
+
+Internal staff work through:
+
+```txt
+Taiga
+  ↓
+User Story
+  ↓
+Task
+  ↓
+Branch
+  ↓
+Pull Request
+```
+
+Internal contributors participate in:
+
+- sprint planning
+- User Story execution
+- Task tracking
+
+### Community Contributors
+
+Community contributors work directly through GitHub.
+
+```txt
+Issue
+  ↓
+Branch
+  ↓
+Pull Request
+```
+
+No Taiga access is required.
+
+---
+
+## Understanding the Platform Workflow
+
+Before creating your first branch, understand:
+
+### Planning
+
+→ Taiga
+
+### Development
+
+→ GitHub
+
+### Delivery
+
+→ CI/CD + Kamal
+
+This separation is fundamental to how ERP Plus operates.
+
+---
+
 ## Reading Order
 
 ### 1. Installation
