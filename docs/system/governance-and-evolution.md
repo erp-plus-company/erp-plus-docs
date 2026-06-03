@@ -90,92 +90,43 @@ Breaking changes are allowed ONLY if:
 
 ## Evolution Flow
 
-Every meaningful system change follows:
+ERP Plus evolves through a controlled product delivery process.
 
-```txt
-Idea
-↓
-Epic (optional)
-↓
-User Story
-↓
-Task
-↓
-Branch
-↓
-Pull Request
-↓
-Review
-↓
-Ready For Test
-↓
-develop
-↓
-main
-↓
-Release
-```
+The complete planning, execution, validation, and release workflow is documented in:
+
+→ [Product & Delivery Management](../product/index.md)
+
+→ [Taiga Workflow](../product/taiga-workflow.md)
+
+→ [Release Management](../product/release-management.md)
+
+System governance defines the rules under which changes may occur, while Product & Delivery Management defines how work moves from planning to production.
 
 ---
 
 ## Product Delivery Governance
 
-ERP Plus uses Taiga as the official product management platform.
+ERP Plus uses a dedicated product management process based on:
 
-### Planning Hierarchy
-
-```txt
-Epic (optional)
-│
-└── User Story
-      │
-      └── Task
-```
-
-A User Story may exist without an Epic.
-
-Tasks represent implementation work items and are associated with a User Story.
-
-### Work Sources
-
-New work may originate from:
-
-- Product planning
-- Customer requests
-- Internal improvements
-- Technical debt
-- Taiga Issues
-
-### Sprint Governance
-
-ERP Plus uses fixed-length sprints.
-
-Current sprint duration:
-
-```txt
-2 weeks
-```
-
-Sprint planning determines:
-
+- Taiga
+- Sprint Planning
 - User Stories
-- priorities
-- capacity allocation
-- release objectives
+- Tasks
+- Release Management
 
-### Source of Truth
+The complete delivery workflow is maintained in:
 
-For implementation work:
+→ [Product & Delivery Management](../product/index.md)
 
-```txt
-Taiga is the source of truth.
-```
+→ [Taiga Workflow](../product/taiga-workflow.md)
 
-For code:
+→ [Sprint Process](../product/sprint-process.md)
 
-```txt
-GitHub is the source of truth.
-```
+→ [Issue Management](../product/issue-management.md)
+
+→ [Release Management](../product/release-management.md)
+
+This document focuses on governance rules and system evolution, not on execution workflows.
 
 ---
 
