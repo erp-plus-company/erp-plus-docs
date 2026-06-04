@@ -66,6 +66,7 @@ nav:
       - Repositories: organization/repositories.md
       - Ownership Model: organization/ownership-model.md
       - Visibility Model: organization/visibility-model.md
+      - Roles and Responsibilities: organization/roles-and-responsibilities.md
 
   - System:
       - Overview: system/index.md
@@ -94,6 +95,7 @@ nav:
       - Introduction: getting-started/index.md
       - Installation: getting-started/installation.md
       - First Run: getting-started/first-run.md
+      - Role-based Onboarding: getting-started/role-based-onboarding.md
 
   - Development:
       - Workflow: development/workflow.md

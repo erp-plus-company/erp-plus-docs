@@ -34,6 +34,20 @@ Production
 
 ## Contents
 
+### Roles Involved
+
+Product delivery involves:
+
+- Product Owners
+- Scrum Masters
+- Tech Leads
+- Engineers
+- QA Engineers
+
+See:
+
+→ [Roles and Responsibilities](../organization/roles-and-responsibilities.md)
+
 ### Taiga Workflow
 
 How Epics, User Stories, Tasks, and Issues are managed.
