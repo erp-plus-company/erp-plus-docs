@@ -128,5 +128,6 @@ ERP Plus Documentation v1.0.0 establishes the initial documentation foundation f
 
 ---
 
-[Unreleased]: https://github.com/erp-plus-company/erp-plus-docs/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/erp-plus-company/erp-plus-docs/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/erp-plus-company/erp-plus-docs/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/erp-plus-company/erp-plus-docs/releases/tag/v1.0.0
