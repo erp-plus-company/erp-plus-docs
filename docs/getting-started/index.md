@@ -34,6 +34,12 @@ This section is intended for:
 
 ERP Plus uses two different workflows depending on the contributor type.
 
+### Choose Your Role
+
+New contributors should start here:
+
+→ [Role-Based Onboarding](../getting-started/role-based-onboarding.md)
+
 ### Internal Contributors
 
 Internal staff work through:

@@ -188,29 +188,11 @@ Engines interact using strict rules:
 
 ERP Plus assumes these system actors:
 
-### Backend Developer
+### Related Documents
 
-- builds engines
-- defines domain logic
-- owns APIs
+→ [Roles and Responsibilities](../organization/roles-and-responsibilities.md)
 
-### Frontend Developer
-
-- consumes engine outputs
-- builds UI via APIs
-- does NOT touch domain rules
-
-### DevOps Engineer
-
-- owns CI/CD pipelines
-- manages deployments
-- monitors infrastructure
-
-### QA Engineer
-
-- validates behavior
-- ensures regression safety
-- tests engines independently
+→ [Role-Based Onboarding](../getting-started/role-based-onboarding.md)
 
 ---
 
