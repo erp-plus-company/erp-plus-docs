@@ -52,8 +52,10 @@ docs/
 ├── engines/
 ├── getting-started/
 ├── development/
+├── product/
 ├── deployment/
 ├── security/
+├── releases/
 └── decisions/
 ```
 
