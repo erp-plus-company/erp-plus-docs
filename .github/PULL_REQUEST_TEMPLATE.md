@@ -14,37 +14,40 @@ Why is the change necessary?
 
 Taiga User Story:
 
-```txt
 TG-123
-```
 
 ## Community Contributors
 
 GitHub Issue:
 
-```txt
 #45
-```
 
 If not applicable:
 
-```txt
 N/A
-```
 
 ---
 
 # Type of Change
 
-- [ ] New documentation
-- [ ] Documentation fix
-- [ ] Architecture update
-- [ ] Workflow update
-- [ ] ADR update
-- [ ] Navigation update
-- [ ] Governance update
-- [ ] Security documentation update
+- [ ] New Documentation
+- [ ] Documentation Fix
+- [ ] Architecture Update
+- [ ] Workflow Update
+- [ ] ADR Update
+- [ ] Navigation Update
+- [ ] Governance Update
+- [ ] Security Documentation Update
+- [ ] Release Documentation Update
 - [ ] Other
+
+---
+
+# Release Impact
+
+- [ ] Patch Release
+- [ ] Minor Release
+- [ ] Major Release
 
 ---
 
@@ -55,9 +58,11 @@ N/A
 - [ ] Architecture
 - [ ] Engines
 - [ ] Development
-- [ ] Deployment
+- [ ] Product & Delivery Management
+- [ ] Operations
 - [ ] Security
 - [ ] Decisions
+- [ ] Releases
 - [ ] Getting Started
 
 ---
@@ -71,13 +76,12 @@ This change affects:
 - [ ] Architecture understanding
 - [ ] Operational procedures
 - [ ] Governance processes
+- [ ] Release process
 - [ ] No significant impact
 
 Details:
 
-```txt
 Describe any relevant impact.
-```
 
 ---
 
@@ -107,7 +111,3 @@ Confirm that the change has been reviewed against related documentation.
 # Additional Notes
 
 Add any additional context here.
-
-```
-
-```
